@@ -1,5 +1,9 @@
 * {
-    outline: 2px black solid;
+    /*outline: 2px black solid;*/
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 body {
@@ -8,8 +12,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: 600;
-    text-decoration: none;
+    font-weight: 500;
     font-family: 'Arial', sans-serif;
     background-color: #f2f2f2;
 }
@@ -31,7 +34,10 @@ body {
 
 .left {
     background-color: #fff;
-    position: relative; /* Añade esta línea */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .right {
@@ -39,33 +45,52 @@ body {
 }
 
 #logo {
-    align-items: start;
     background-color: #fff;
+    margin-top: 40px; /* Añade un margen superior si es necesario */
+    margin-left: 35px;
 }
 
 .login {
-    width: 35%;
-    margin: auto;
+    width: 34%;
+    margin: 0 auto;
+    margin-top: 50px;
     background-color: #fff;
+    position: relative; /* Añade esta línea */
+    z-index: 1; /* Añade esta línea */
 }
 
 .login h1 {
     font-size: 17px;
+    margin: 0;
     margin-bottom: 10px;
+    color: #505050;
+}
+
+#cyan {
+    color: #00cbbf;
 }
 
 .login h2 {
-    font-size: 13px;
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .login figcaption {
+    font-weight: 400;
     font-size: 13px;
     margin-bottom: 20px;
+    color: #6e6e6e;
+}
+
+.informacion h2 {
+    color: #888a88;
 }
 
 #reestablecer h2 {
+    font-size: 14px;
     text-align: center;
-    margin-block: 25px;
+    margin-block: 28px;
 }
 
 .buttons {
@@ -76,30 +101,51 @@ body {
 #ingresar, #huella {
     margin-block: 8px;
     padding: 10px;
-    padding-block: 12px;
+    padding-block: 14px;
     border-radius: 50px;
-    background-color: #00cbbf;
-    color: #fff;
-    font-size: 17px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
-    border: none;
     transition: 0.3s;
 }
 
 #ingresar {
     margin-bottom: 25px;
+    font-weight: bold;
+    background-color: #00cbbf;
+    color: #fff;
+    border: none;
+}
+
+#huella {
+    background-color: #f2f2f2;
+    color: #00cbbf;
+    border: #00cbbf 1px solid;
 }
 
 #rut, #clave {
     width: 91%;
     padding: 10px;
+    padding-block: 12px;
     border-radius: 50px;
+    border: 1px solid #d9d9d9;
+    color: #555860;
+}
+
+#rut:hover, #clave:focus {
+    border: 1px solid #701a8b;
+}
+
+::placeholder {
+    color: #d1cfcf;
 }
 
 .volver {
     position: absolute; /* Añade esta línea */
     bottom: 0; /* Añade esta línea */
     left: 0; /* Añade esta línea */
-    margin-block: 25px;
+    margin-bottom: 40px;
+    margin-left: 35px;
+    font-size: 14px;
+    color: #6e6e6e;
 }
