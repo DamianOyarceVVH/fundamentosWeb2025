@@ -1,39 +1,105 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     outline: 2px black solid;
 }
 
 body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-decoration: none;
     font-family: 'Arial', sans-serif;
     background-color: #f2f2f2;
-    margin: auto;
-    padding: auto;
 }
 
 #container {
     width: 100%;
-    height: 100%;
-    margin: auto;
+    height: 100vh; /* Cambia a 100vh para ocupar toda la altura de la ventana */
+    margin: 0; /* Asegúrate de que no haya margen */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch; /* Cambia a stretch para que los hijos ocupen toda la altura */
     background-color: #fff;
 }
 
-.left {
+.left, .right {
     width: 50%;
-    height: 100%;
-    margin: auto;
-    
+    height: 100%; /* Asegúrate de que ambos divs ocupen toda la altura */
+}
+
+.left {
+    background-color: #fff;
+    position: relative; /* Añade esta línea */
 }
 
 .right {
-    width: 50%;
-    height: 100%;
-    margin: ;
-    padding: 23%;
     background-color: #00cbbf;
-    
+}
+
+#logo {
+    align-items: start;
+    background-color: #fff;
+}
+
+.login {
+    width: 35%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.login h1 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.login h2 {
+    font-size: 13px;
+}
+
+.login figcaption {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+#reestablecer h2 {
+    text-align: center;
+    margin-block: 25px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#ingresar, #huella {
+    margin-block: 8px;
+    padding: 10px;
+    padding-block: 12px;
+    border-radius: 50px;
+    background-color: #00cbbf;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+#ingresar {
+    margin-bottom: 25px;
+}
+
+#rut, #clave {
+    width: 91%;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.volver {
+    position: absolute; /* Añade esta línea */
+    bottom: 0; /* Añade esta línea */
+    left: 0; /* Añade esta línea */
+    margin-block: 25px;
 }

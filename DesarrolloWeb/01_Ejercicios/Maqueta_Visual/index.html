@@ -9,15 +9,25 @@
 <body>
     <div id="container">
         <section class="left">
-            <img src="img/b5fc9c0419c32e6789bc.svg" alt="logo">
+            <img src="img/b5fc9c0419c32e6789bc.svg" alt="logo" id="logo">
             <div class="login">
                 <h1>Ingresa a tu Consalud</h1>
                 <figcaption>¡Haz tus trámites más simples!</figcaption>
-                
+                <div class="informacion">
+                    <h2>RUT</h2>
+                    <input type="text" name="rut" id="rut" placeholder="12.345.678-9">
+                    <h2>Clave</h2>
+                    <input type="text" name="clave" id="clave" placeholder="********">
+                </div>
+                <a href="" id="reestablecer"><h2>¿Olvidaste tu clave?</h2></a>
+                <div class="buttons">
+                    <button type="submit" id="ingresar">Ingresar</button>
+                    <button type="submit" id="huella">Ingresar con huella</button>
+                </div>
             </div>
+            <div class="volver">Volver a <a href="">Consalud.cl</a></div>
         </section>
         <section class="right">
-
         </section>
     </div>
 </body>
