@@ -1,4 +1,4 @@
-let numero = 0; // Numérica
+let numero = 17; // Numérica
 let decimal = 2.5; // Decimal (num float)
 let texto = "Hola"; // Texto
 let booleano = true; // Booleano
@@ -8,13 +8,39 @@ let objeto = { // Conjunto de propiedades
     nombre: "Damián",
     edad: 17
 };
+let indefinida; // Variable indefinida
+let nulo = null; // Variable nula
 
-function decimal() {
-    alert("5.5");
+// Funciones para mostrar las variables
+
+function alertaDecimal() {
+    alert('696.9');
 }
 
+function alertaTexto() {
+    alert('Este es un texto de prueba, parangiricutirimicuaro');
+}
 
+function alertaBooleano() {
+    alert(booleano);
+}
 
-function sumar(a, b) { // Funcion que suma dos números
-    return a + b;
+function alertaArray() {
+    alert(['Alan', 'Turing', 1912, 1954]);
+}
+
+function alertaObjeto() {
+    alert(JSON.stringify(objeto));
+}
+
+function alertaIndefinida() {
+    alert(indefinida);
+}
+
+function alertaNulo() {
+    alert(nulo);
 };
+
+function alertaOperacion() {
+    alert(28 + 21);
+}
