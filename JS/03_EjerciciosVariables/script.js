@@ -10,6 +10,7 @@ let objeto = { // Conjunto de propiedades
 };
 let indefinida; // Variable indefinida
 let nulo = null; // Variable nula
+let sumar = (a, b) => a + b; // Función para sumar
 
 // Funciones para mostrar las variables
 
@@ -30,11 +31,15 @@ function alertaBooleano() {
 }
 
 function alertaArray() {
-    alert(['Alan', 'Turing', 1912, 1954]);
+    alert("Lista de elementos: \n" + array);
+}
+
+function alertaMatriz() {
+    alert("Lista de listas: \n" + matriz);
 }
 
 function alertaObjeto() {
-    alert(JSON.stringify(objeto));
+    alert(`Nombre: ${objeto.nombre}, Edad: ${objeto.edad}`);
 }
 
 function alertaIndefinida() {
@@ -46,5 +51,5 @@ function alertaNulo() {
 };
 
 function alertaOperacion() {
-    alert(28 + 21);
+    alert("a + b = " + sumar(28, 21));
 }
