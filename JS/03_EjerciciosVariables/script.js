@@ -13,6 +13,10 @@ let nulo = null; // Variable nula
 
 // Funciones para mostrar las variables
 
+function alertaEntero() {
+    alert('42');
+}
+
 function alertaDecimal() {
     alert('696.9');
 }
