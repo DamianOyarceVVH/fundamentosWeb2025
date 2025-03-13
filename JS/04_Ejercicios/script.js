@@ -38,8 +38,8 @@ function realizarOperaciones() {
 function manipularCadenas() {
     let direccion = prompt("Ingresa tu dirección: ");
     let n_casa = parseInt(prompt("Ingresa el número de casa: "));
-    let mensaje = "Dirección: " + direccion + " " + n_casa;
+    let mensaje = direccion + " " + n_casa;
     let longitud = mensaje.length;
     let antepenultimo = mensaje.charAt(longitud - 3);
-    alert("Mensaje: " + mensaje + "\nCantidad de caracteres: " + longitud + "\nAntepenúltimo carácter: " + antepenultimo);
+    alert("Dirección: " + mensaje + "\nCantidad de caracteres: " + longitud + "\nAntepenúltimo carácter: " + antepenultimo);
 }
