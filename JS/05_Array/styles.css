@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    /*outline: 5px black solid;*/
+    font-family: Arial, sans-serif;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    justify-content: start;
+}
+
+nav li a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+button {
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
