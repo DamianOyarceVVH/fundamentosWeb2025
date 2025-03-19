@@ -1,8 +1,18 @@
 console.log("Vinculado correctamente...")
 
+// Evaluación de Edad
+function edad() {
+    let edad = parseInt(prompt("Ingresa tu edad: "));
+    if (edad >= 18) {
+        alert("Eres mayor de edad.");
+    } else {
+        alert("Eres menor de edad.");
+    }
+}
+
 // Evaluación de Temperatura
 function temperatura() {
-    let celcius = prompt("Ingresa la temperatura en °C: ");
+    let celcius = parseFloat(prompt("Ingresa la temperatura en °C: "));
     if (celcius < 0) {
         alert("La temperatura es: " + celcius + "°C\nHace mucho frío.");
     } else {
@@ -19,6 +29,18 @@ function verificarUsuario() {
     }
     else {
         alert("Acceso denegado");
+    }
+}
+
+// Determinar el Signo de un Número
+function signoNumero() {
+    let numero = prompt("Ingrese un número: ");
+    if (numero > 0) {
+        alert("El número " + numero + " es positivo.");
+    } else if (numero < 0) {
+        alert("El número " + numero + " es negativo.");
+    } else {
+        alert("El número es cero.");
     }
 }
 
