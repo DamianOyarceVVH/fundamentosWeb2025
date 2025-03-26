@@ -11,7 +11,7 @@ function imp_num() {
 }
 
 function imp_num_r() {
-    let num = 10;
+    let num = 100;
     let array = [];
     while (num >= 1) {
         array.push(num);
@@ -36,4 +36,12 @@ function imp_mul() {
         array.push(i);
     }
     alert(`Estos son los múltiplos de 2 desde el 1 al 10:\n ${array.join(" - ")}`)
+}
+
+function bucleFor() {
+    let array = [];
+    for(i = 10; i >= 1; i--) {
+        array.push(i);
+    }
+    alert(`Los números son: ${array.join(" - ")}`)
 }
