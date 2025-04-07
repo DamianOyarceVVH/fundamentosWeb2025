@@ -1,0 +1,76 @@
+
+/* Estilos generales */
+body {
+    margin: 0; /* Quitamos los márgenes*/
+    font-family: 'Inter', sans-serif; /*Tipo de fuente*/
+    background-color: #ffffff;
+    color: #000000;
+    display: flex; /*Organiza los elementos*/
+    flex-direction: column; /* Organiza los elementos en una columna*/
+    min-height: 100dvh; /*Ocupa toda la altura de la pantalla*/
+}
+
+/* Encabezado */
+header {
+    background-color: #343140; 
+    color: white;
+    padding: 20px 0; /* Espacio arriba y abajo del contenido del encabezado */
+    text-align: center; /* Centra el texto horizontalmente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0; /* Quitamos el margen del título */
+    font-size: 28px; /* Tamaño de letra del título */
+}
+
+/* Sección principal */
+main {
+    flex: 1; /* Hace que el main crezca y ocupe el espacio disponible entre el header y el footer */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 30px 15px; /* Espacio interno alrededor del contenido */
+}
+
+section.funcion {
+    background-color:#343140;
+    padding: 30px; /* Espaciado interno para que el contenido no quede pegado a los bordes */
+    border-radius: 12px;  /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 400px; /* Ancho máximo del contenedor (no se hará más grande que esto) */
+    width: 100%; /* Ocupa todo el ancho disponible dentro del límite */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+section.funcion h1 {
+    font-size: 22px;  /* Tamaño de letra del título dentro de la sección */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #ffffff;
+}
+
+/* Botón */
+.btn {
+    background-color:  #919191;    ;
+    color: white;
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interno del botón (alto y ancho) */
+    font-size: 16px;
+    cursor: pointer; /* El cursor cambia a una mano al pasar por encima */
+    
+}
+
+.btn:hover {
+    background-color: #000000; /* El botón se vuelve negro cuando se pasa el mouse encima */
+}
+
+/* Pie de página */
+footer.pie {
+    background-color: #e5e7eb;
+    color: #000000;
+    text-align: center; /* Centra el texto */
+    padding: 15px 10px; /* Espacio interno del pie de página */
+    font-size: 14px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);  /* Sombra suave encima del pie de página */
+}

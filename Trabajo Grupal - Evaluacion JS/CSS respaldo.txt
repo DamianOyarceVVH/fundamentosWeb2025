@@ -1,0 +1,88 @@
+/* Respaldo de CSS */
+
+*{ /* Elimina margenes y rellenos predeterminados */
+    margin: 0;
+    padding: 0;
+}
+
+/* */
+body{
+    font-family: Arial, Helvetica, sans-serif; /* */
+    background-color: #f7f7f7; /* */
+    color: #333; /* */
+    display: flex; /* */
+    justify-content: center; /* */
+    text-align: center; /* */
+    height: 100vh; /* */
+}
+
+/* Contenedor principal */
+main{
+    display: flex; /* */
+    justify-content: center; /* */ 
+    align-items: center; /* */
+    width: 100%; /* */
+    z-index: 1; /* le da jerarquia inferior a main*/
+}
+
+nav{ /* llama a los elementos nav en html */
+    width: 100%; /* Nav usara el 100% de largo de la pagina */
+    background-color: cornflowerblue; /* Poner el color de fondo*/
+    padding: 25px; /* Agrega un padding encargado de separar el texto*/ /* esta rara ocacion aumenta el heigt */
+    z-index: 10; /* establece jerarquia, en caso de alargar el html */
+    position: fixed; /* Arregla la posicion de nav*/
+}
+
+/* */
+ul{
+    list-style: none; /* */
+    display: flex; /* */
+    
+}
+
+/* */
+li{
+    margin: 0 15px; /* */
+}
+
+/* */
+a{
+    text-decoration: none; /* */
+    color: white; /* */
+    font-weight: bold; /* */
+}
+
+/* */
+a:hover{
+    color: rgb(212, 224, 248); /* */
+}
+
+.botones{ /* llama al section botones*/
+    padding: 50px; /* agrega una distancia a los boones del */
+    
+}
+
+.btn{ /* llama a los elementos btn (botones) */
+    background-color: #3440e6; /* Color*/
+    border: none; /* */
+    color: white; /* */
+    padding: 12px 28px; /* */
+    text-align: center; /* */
+    text-decoration: none; /* */
+    display: inline-block; /* */
+    font-size: 1rem; /* */
+    margin: 10px 0; /* */
+    cursor: pointer; /* */
+    border-radius: 20px; /* */
+}
+
+/* Efecto hover para los botones */
+.btn:hover {
+    background-color: #5a86e6; /* */
+}
+
+/* Recuerda comentar el codigo xd */
+
+/* z-index carreando */
+
+/* si xd */
