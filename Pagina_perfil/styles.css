@@ -1,0 +1,228 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /*outline: black solid;*/
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.nav-links a:hover {
+    color: #fefefe;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cfcece;
+    display: flex;
+    padding-right: 10px;
+}
+
+.nav-title {
+    color: white;
+    font-size: 40px;
+}
+
+.btn {
+    font-size: 25px;
+    background-color: #12acc4;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px rgb(0, 0, 0);
+    border: 4px solid black;
+    padding-block: 5px;
+}
+
+.one, .two, .three, .btn {
+    margin-inline: 15px;
+    margin-block: 0px;
+    margin-top: 4px;
+}
+
+#perfil {
+    margin-bottom: 40px;
+    width: 530px;
+    border-radius: 5px;
+}
+
+.fondo {
+    background-color: #17a2b8;
+    height: 120px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#imagenPerfil {
+    margin: 55px 50px;
+    height: 130px;
+}
+
+#perfil-info h1 {
+    font-size: 36px;
+    font-weight: 200;
+    margin-top: 60px;
+    margin-bottom: -8px;
+    margin-left: 40px;
+}
+
+#perfil-info h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#perfil-info h3 {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+#perfil-info h4, a {
+    margin-top: 10px;
+}
+
+#perfil-info a {
+    color: #2d5fbd;
+}
+
+#marcador {
+    height: 20px;
+    margin: 0px 5px;
+    margin-bottom: 0px;
+}
+
+#engranaje {
+    height: 28px;
+    margin: -9px 0px;
+    margin-left: 40px;
+}
+
+#education {
+    width: 530px;
+}
+
+.education-title h1 {
+    margin-left: 40px;
+}
+
+.education-info h1, h2, h3 {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.education-info h1 {
+    margin-bottom: 0px;
+}
+
+.education-info h2 {
+    color: #777777;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+#container {
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+#right {
+    margin-left: 30px;
+    width: 300px;
+}
+
+.amount {
+    background-color: #cccccc;
+    color: black;
+    margin-right: 10px;
+    padding-inline: 12px;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.connection-request-info {
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    margin-block: 10px;
+}
+
+.row h2 {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 0px;
+    width: 110px;
+}
+
+.your-connections-info h2{
+    margin-top: 0px;
+}
+
+#user {
+    height: 40px;
+    margin: 5px 0px 0 20px;
+    border-radius: 50%;
+}
+
+.accept, .close {
+    height: 36px;
+    margin-top: 9px;
+    margin-left: 7px;
+}
+
+.accept {
+    margin-left: 20px;
+}
+
+.more {
+    border-top: #d3d3d3 solid;
+}
+
+.border {
+    border: 4px solid;
+    border-color: #d3d3d3;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+.education-title {
+    background-color: #333333;
+    color: whitesmoke;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-block: 1px;
+}
+
+.connection-request-title, .your-connections-title {
+    display: flex;
+    color: whitesmoke;
+    background-color: #333333;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-block: 1px;
+    justify-content: center;
+}
+
+.connections-request {
+    margin-bottom: 20px;
+}
