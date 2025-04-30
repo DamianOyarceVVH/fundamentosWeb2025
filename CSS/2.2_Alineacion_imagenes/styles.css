@@ -1,0 +1,26 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+}
+
+.padre1, .padre2, .padre3{
+    display: flex;  /* flexiona elementos y necesario para usar justify-content*/
+    justify-content: space-around; /* Distribuye elementos de forma uniforme horizontalmente. */
+    margin-block: 10px;
+    margin-inline: 300px;
+    padding: 5px;
+    }
+
+.padre1{
+    background-color: #59C5ED;
+    }
+
+.padre2{
+    background-color: #D8A3C7;
+    }
+
+    .octocat {
+        height: 180px;
+    }
