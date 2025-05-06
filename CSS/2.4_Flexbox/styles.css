@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.izquierdo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid black;
+}
+
+.derecho {
+    flex: 1;
+    outline: 2px solid black;
+}
+
+.box-1 {
+    background-color: none;
+}
+
+div {
+    background-color: #B3B5B4;
+    margin-inline: 8px;
+    margin-block: 16px;
+}
+
+.son {
+    border: 3px solid red;
+    display: flex;
+}
+
+.box-1-1 {
+    width: 300px;
+    height: 180px;
+}
+
+.box-1-2 {
+    height: 65px;
+    width: 300px;
+}
+
+.box-2 div {
+    height: 120px;
+    width: 120px;
+}
+
+.box-3 {
+    width: 140px;
+    height: 240px;
+}
+
+.box-4 div {
+    width: 300px;
+    height: 120px;
+}
+
+.box-5
