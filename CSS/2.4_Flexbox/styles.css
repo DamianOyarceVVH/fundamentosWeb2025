@@ -16,6 +16,10 @@
     background-color: #E6E6E6;
 }
 
+.derecho {
+    flex-direction: row;
+}
+
 .box-4, .box-5, .box-6 {
     padding: 10px;
 }
@@ -63,6 +67,12 @@
     flex: 1;
     display: flex;
     border: solid green 1px;
+}
+
+.box-7 {
+    flex: 1;
+    display: flex;
+    border: solid red 1px;
 }
 
 .square {
