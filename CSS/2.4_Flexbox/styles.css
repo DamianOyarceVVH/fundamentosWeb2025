@@ -12,7 +12,6 @@
     flex:1;
     display: flex;
     flex-direction: column;
-    outline: solid 1px red;
     background-color: #E6E6E6;
 }
 
@@ -27,53 +26,64 @@
 .box-1 {
     flex: 1;
     display: flex;
-    border: solid blue 2px;
 }
 
 .box-1-1 {
     flex: 1;
     display: flex;
     flex-direction: row-reverse;
-    border: solid blue 2px;
 }
 
 .box-2 {
     flex: 2;
     display: flex;
     flex-direction: column;
-    border: solid green 1px;
 }
 
 .box-3 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    border: solid green 1px;
 }
 
 .box-4 {
     flex: 3;
     display: flex;
-    border: solid green 1px;
 }
+
 
 .box-5 {
     flex: 1;
     display: flex;
-    border: solid green 1px;
 }
 
 .box-6 {
     flex: 1;
     display: flex;
-    border: solid green 1px;
 }
 
 .box-7 {
     flex: 1;
     display: flex;
-    border: solid red 1px;
+    flex-direction: column;
 }
+
+.box-7-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.box-8 {
+    flex: 2;
+    display: flex;
+}
+
+.box-9 {
+    flex: 1;
+    display: flex;
+}
+
 
 .square {
     margin: 0;
