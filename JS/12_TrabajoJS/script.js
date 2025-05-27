@@ -24,7 +24,7 @@ function simulador() {
     let productos = ['manzana', 'pan', 'leche']
     let mensaje = ""
 
-    for(i = 1; i <= 5; i++){
+    for(i = 1; i <= 5; i++) {
         if (productos.length > 0) {
             let vendido = productos.pop();
             mensaje += `Producto vendido: ${vendido}\n`;
