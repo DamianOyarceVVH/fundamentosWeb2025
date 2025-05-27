@@ -85,3 +85,12 @@ span {
     border-radius: 8px;
     padding: 30px 20px 40px 20px;
 }
+
+#registro, #simulador {
+    padding: 10px 14px 10px 14px;
+    font-size: 100%;
+    background-color: #34495E;
+    color: #FDF6EC;
+    border: 2px solid #;
+    border-radius: 50%;
+}
