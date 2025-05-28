@@ -1,0 +1,96 @@
+/* Reset y estilos globales */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FDF6EC;
+    color: white;
+}
+
+/* Navegación principal */
+
+nav {
+    background-color: #34495E;
+    padding: 12px;
+}
+
+.flex h1, .flex figcaption {
+    margin-block: 25px;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+figcaption {
+    font-size: 90%;
+}
+
+/* Sección principal Flexbox */
+
+.flexbox {
+    margin: 50px 8%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Caja principal (título y descripción) */
+.box-1 {
+    flex: 1;
+    background-color: #E67E22;
+    margin: 6px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+h2 {
+    font-size: 150%;
+    margin: 20px;
+}
+
+h3 {
+    font-size: 140%;
+    margin: 20px;
+}
+
+span {
+    font-family: monospace;
+    font-size: 140%;
+}
+
+/* Contenedor de cajas secundarias */
+.box-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Cajas secundarias (características) */
+.box-3, .box-4, .box-5 {
+    background-color: #D35400;
+    flex: 1;
+    margin: 6px;
+    border-radius: 8px;
+    padding: 30px 20px 40px 20px;
+}
+
+#promedios, #separador {
+    padding: 10px 14px 10px 14px;
+    font-size: 100%;
+    background-color: #34495E;
+    color: #FDF6EC;
+    border: 2px solid #;
+    border-radius: 50%;
+}
