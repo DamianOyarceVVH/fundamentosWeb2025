@@ -76,12 +76,17 @@ body {
     flex-wrap: wrap;
     flex: 2;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .info {
+    flex: 2;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.portada {
+    flex: 1;
 }
 
 .tarjeta:hover {
@@ -90,34 +95,6 @@ body {
 }
 
 /* Estilos específicos para Mugiwaras */
-.mugiwara {
-    border-left: 5px solid #5800ca;
-}
-
-.mugiwara h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-    font-size: 19.2px;
-    padding: 10px;
-}
-
-.mugiwara p {
-    color: #7f8c8d;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-/* Estilo especial para el capitán */
-.capitan {
-    border-left: 5px solid #ffd54f;
-    background: linear-gradient(135deg, #fff9c4 0%, #fff 100%);
-}
-
-.capitan h3 {
-    color: #f39c12;
-    font-size: 20.8px;
-    font-weight: bold;
-}
 
 /*imágenes dentro de tarjetas */
 .tarjeta img {
@@ -125,4 +102,70 @@ body {
     box-shadow: 0 0 6px #9995;
     margin-bottom: 10px;
     height: 225px;
+}
+
+/* Estilo especial para el capitán */
+.mugiwara {
+    background: linear-gradient(135deg, #fff 0%, #d8dbdd 100%);
+    border-left: 5px solid #5800ca;
+}
+
+.mugiwara h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.mugiwara p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Estilo especial para el capitán */
+.capitan {
+    border-left: 5px solid #9B000F;
+}
+
+.capitan h3 {
+    color: #9B000F;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Colores alternos para variedad */
+.tarjeta:nth-child(2n) {
+    border-left-color: #057213;
+}
+
+.tarjeta:nth-child(3n) {
+    border-left-color: #FC7823;
+}
+
+.tarjeta:nth-child(4n) {
+    border-left-color: #583f35;
+}
+
+.tarjeta:nth-child(5n) {
+    border-left-color: #B94225;
+}
+
+.tarjeta:nth-child(6n) {
+    border-left-color: #1E7899;
+}
+
+.tarjeta:nth-child(7n) {
+    border-left-color: #D6799D;
+}
+
+.tarjeta:nth-child(8n) {
+    border-left-color: #00D4FC;
+}
+
+.tarjeta:nth-child(9n) {
+    border-left-color: #000000;
+}
+
+.tarjeta:nth-child(10n) {
+    border-left-color: #93BEDB;
 }
