@@ -20,7 +20,6 @@ body {
     background-image: linear-gradient(170deg, #113055 50%, #ddd6c0 100%);
     color: #fff;
     flex: 1;
-    max-width: 300px;
     padding: 20px;
 }
 
@@ -44,7 +43,7 @@ body {
 
 /* CONTENIDO */
 .contenido {
-    flex: 2;
+    flex: 5;
     padding: 30px;
     overflow-y: auto;
     background-image: url('img/background.jpg');
@@ -57,7 +56,6 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 
 .tarjeta {
@@ -66,7 +64,7 @@ body {
     align-items: center;         /* Centra horizontalmente el contenido */
     justify-content: center;
     padding: 25px;
-    text-align: center;
+    text-align: start;
     border-radius: 12px;
     background-color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -78,6 +76,11 @@ body {
     flex-wrap: wrap;
     flex: 2;
     text-align: center;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
     justify-content: center;
 }
 
