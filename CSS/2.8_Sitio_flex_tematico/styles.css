@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*outline: 2px solid black;*/
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f4f8;
+}
+
+.contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+/* NAV */
+.nav {
+    background-image: linear-gradient(170deg, #113055 50%, #ddd6c0 100%);
+    color: #fff;
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+}
+
+.nav h2 {
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    margin: 10px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(180, 179, 179);
+    transition: 0.3s;
+}
+
+/* CONTENIDO */
+.contenido {
+    flex: 2;
+    padding: 30px;
+    overflow-y: auto;
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;      /* Hace que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+}
+
+.galeria {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjeta {
+    margin-block: 10px;
+    display: flex;     /* Asegura disposición vertical */
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;         /* Centra horizontalmente el contenido */
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    text-align: center;
+}
+
+.tarjeta:hover {
+    transform:translatey(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos específicos para Mugiwaras */
+.mugiwara {
+    border-left: 5px solid #5800ca;
+}
+
+.mugiwara h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 19.2px;
+    padding: 10px;
+}
+
+.mugiwara p {
+    color: #7f8c8d;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Estilo especial para el capitán */
+.capitan {
+    border-left: 5px solid #ffd54f;
+    background: linear-gradient(135deg, #fff9c4 0%, #fff 100%);
+}
+
+.capitan h3 {
+    color: #f39c12;
+    font-size: 20.8px;
+    font-weight: bold;
+}
+
+/*imágenes dentro de tarjetas */
+.tarjeta img {
+    border-radius: 8px;
+    box-shadow: 0 0 6px #9995;
+    margin-bottom: 10px;
+    height: 225px;
+}
