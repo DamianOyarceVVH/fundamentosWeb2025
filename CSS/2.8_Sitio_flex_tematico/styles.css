@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /*outline: 2px solid black;*/
+    outline: 2px solid black;*/
 }
 
 body {
@@ -62,10 +62,9 @@ body {
 
 .tarjeta {
     margin-block: 10px;
-    display: flex;     /* Asegura disposición vertical */
-    flex: 1;
     flex-wrap: wrap;
     align-items: center;         /* Centra horizontalmente el contenido */
+    justify-content: center;
     padding: 25px;
     text-align: center;
     border-radius: 12px;
@@ -79,6 +78,7 @@ body {
     flex-wrap: wrap;
     flex: 2;
     text-align: center;
+    justify-content: center;
 }
 
 .tarjeta:hover {
