@@ -82,7 +82,7 @@ h3 {
 }
 
 .box.active h2 {
-    left: 25px;
+    left: 10px;
     right: auto;
     margin: 0 auto;
     font-weight: 600;
