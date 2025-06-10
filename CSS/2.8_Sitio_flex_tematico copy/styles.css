@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    outline: 2px solid black;*/
+    /*outline: 2px solid black;*/
 }
 
 body {
@@ -15,7 +15,6 @@ body {
     height: 100vh;
 }
 
-/* NAV */
 .nav {
     background-image: linear-gradient(170deg, #113055 50%, #ddd6c0 100%);
     color: #fff;
@@ -41,7 +40,6 @@ body {
     transition: 0.3s;
 }
 
-/* CONTENIDO */
 .contenido {
     flex: 5;
     padding: 30px;
@@ -72,11 +70,17 @@ body {
 }
 
 .content {
+    background-color: #dedede;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     flex: 2;
     text-align: center;
     justify-content: space-between;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0; /* Asegura que el padding inicial sea 0 */
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 
 .info {
@@ -94,78 +98,78 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilos específicos para Mugiwaras */
-
-/*imágenes dentro de tarjetas */
 .tarjeta img {
     border-radius: 8px;
-    box-shadow: 0 0 6px #9995;
-    margin-bottom: 10px;
+    
     height: 225px;
 }
 
-/* Estilo especial para el capitán */
 .mugiwara {
-    background: linear-gradient(135deg, #fff 0%, #d8dbdd 100%);
-    border-left: 5px solid #5800ca;
+    border-left: 5px solid #9B000F;
+    color: #9B000F;
 }
 
 .mugiwara h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 .mugiwara p {
     color: #7f8c8d;
     font-size: 0.9em;
     font-weight: 500;
-}
-
-/* Estilo especial para el capitán */
-.capitan {
-    border-left: 5px solid #9B000F;
-}
-
-.capitan h3 {
-    color: #9B000F;
-    font-size: 1.3em;
-    font-weight: bold;
+    width: 100%;
 }
 
 /* Colores alternos para variedad */
 .tarjeta:nth-child(2n) {
     border-left-color: #057213;
+    color: #057213;
 }
 
 .tarjeta:nth-child(3n) {
     border-left-color: #FC7823;
+    color: #FC7823;
 }
 
 .tarjeta:nth-child(4n) {
     border-left-color: #583f35;
+    color: #583f35;
 }
 
 .tarjeta:nth-child(5n) {
     border-left-color: #B94225;
+    color: #B94225;
 }
 
 .tarjeta:nth-child(6n) {
     border-left-color: #1E7899;
+    color: #1E7899;
 }
 
 .tarjeta:nth-child(7n) {
     border-left-color: #D6799D;
+    color: #D6799D;
 }
 
 .tarjeta:nth-child(8n) {
     border-left-color: #00D4FC;
+    color: #00D4FC;
 }
 
 .tarjeta:nth-child(9n) {
     border-left-color: #000000;
+    color: #000000;
 }
 
 .tarjeta:nth-child(10n) {
     border-left-color: #93BEDB;
+    color: #93BEDB;
+}
+
+.tarjeta.active .content {
+    max-height: 500px; /* Ajusta según el contenido máximo esperado */
+    padding: .7rem 0;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
 }
