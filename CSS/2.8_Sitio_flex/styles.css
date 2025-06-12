@@ -63,15 +63,12 @@ body {
     justify-content: center;
     padding: 25px;
     text-align: start;
-    border-radius: 12px;
-    background-color: #fff;
+    background-color: #fff1d1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
 }
 
 .content {
-    background-color: #dedede;
-    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     flex: 2;
@@ -80,17 +77,69 @@ body {
     overflow: hidden;
     max-height: 0;
     padding: 0; /* Asegura que el padding inicial sea 0 */
-    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
+    transition: max-height 1s cubic-bezier(0.4,0,0.2,1), padding 1s cubic-bezier(0.4,0,0.2,1);
 }
 
-.info {
+.descripcion {
+    background-color: #efdfb9;
+    padding: 1em;
+    margin: 0.5em;
     flex: 2;
-    display: flex;
+    display: block;
+    width: 100%;
+    flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.descripcion p {
+    width: 100%;
+    padding: 10px;
+    color: #111;
+    box-sizing: border-box;
+}
+
+.imagenes {
+    background-color: #fff1d1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.imagenes img {
+    margin-block: 10px;
 }
 
 .portada {
+    background-color: #efdfb9;
     flex: 1;
+    padding: 1.5em;
+    margin: 0.5em;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.row p {
+    flex: 1;
+    padding: 10px;
+    text-align: start;           /* Centra el texto dentro de los <p> */
+    display: flex;
+    align-items: center;
+    border: 1px solid #000000;
 }
 
 .tarjeta:hover {
@@ -98,9 +147,7 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.tarjeta img {
-    border-radius: 8px;
-    
+.content img {
     height: 225px;
 }
 
@@ -116,7 +163,6 @@ body {
 }
 
 .mugiwara p {
-    color: #7f8c8d;
     font-size: 0.9em;
     font-weight: 500;
     width: 100%;
@@ -169,7 +215,17 @@ body {
 }
 
 .tarjeta.active .content {
-    max-height: 500px; /* Ajusta según el contenido máximo esperado */
+    max-height: 1000em; /* Ajusta según el contenido máximo esperado */
     padding: .7rem 0;
     transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
 }
+
+.color {
+    background-color: #9B000F;
+    color: #fff;
+}
+
+.tarjeta:nth-child(2) .color {
+    background-color: #057213;
+}
+
