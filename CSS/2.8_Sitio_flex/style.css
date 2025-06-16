@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    /*outline: 2px solid black;*/
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f4f8;
+}
+
+.contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- NAV --- */
+.nav {
+    background-color: #113055;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.nav img {
+    margin-bottom: 1em;
+}
+
+.nav p {
+    font-size: 1.2em;
+    padding: 0.5em;
+    background-color: #e6cf9c;
+}
+
+/* --- INFO (dentro de NAV) --- */
+.info {
+    background-color: #efdeb0;
+    padding: 0.5em;
+    overflow-y: auto;
+    max-height: 70vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- MAIN .contenido --- */
+.contenido {
+    flex: 5;
+    padding: 30px;
+    overflow-y: auto;
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido h1 {
+    background-color: #efdeb0;
+    padding: 0.5em;
+    color: #113055;
+}
+
+/* --- GALERIA --- */
+.galeria {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+/* --- TARJETA --- */
+.tarjeta {
+    margin-block: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: start;
+    background-color: #efdeb0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translatey(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- CONTENT (dentro de TARJETA) --- */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    text-align: center;
+    justify-content: space-between;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 1s cubic-bezier(0.4,0,0.2,1), padding 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+.tarjeta.active .content {
+    max-height: 1000em; /* Ajusta según el contenido máximo esperado */
+    padding: .7rem 0;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* --- PORTADA (dentro de CONTENT) --- */
+.portada {
+    background-color: #e6cf9c;
+    flex: 1;
+    padding: 1.5em;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.portada img {
+    margin-bottom: 1em;
+}
+
+/* --- INFORMACION (dentro de PORTADA) --- */
+.informacion {
+    display: flex;
+    flex-direction: column;
+    background-color: #efdeb0;
+    margin: 10px;
+    width: 100%;
+}
+
+/* --- ROW (dentro de INFORMACION) --- */
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.row p {
+    flex: 1;
+    padding: 10px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    border: 2px solid #e6cf9c;
+}
+
+/* --- DESCRIPCION (dentro de CONTENT) --- */
+.descripcion {
+    background-color: #e6cf9c;
+    padding: 1em;
+    margin: 0.5em;
+    flex: 2;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.descripcion p {
+    width: 100%;
+    padding: 10px;
+    color: #111;
+    box-sizing: border-box;
+}
+
+/* --- IMAGENES (dentro de DESCRIPCION) --- */
+.imagenes {
+    background-color: #efdeb0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.imagenes img {
+    margin-block: 1.5em;
+}
+
+/* --- IMAGENES GENERALES EN CONTENT --- */
+.content img {
+    height: 225px;
+}
+
+/* --- MUGIWARA --- */
+.mugiwara {
+    border-left: 5px solid #9B000F;
+    color: #9B000F;
+}
+
+.mugiwara h3 {
+    margin-bottom: 3px;
+    font-size: 2em;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.mugiwara p {
+    font-size: 1.2em;
+    font-weight: 500;
+    width: 100%;
+}
+
+/* --- COLOR --- */
+.color {
+    background-color: #9B000F;
+    color: #fff;
+}
+
+/* --- NTH-CHILD Y VARIANTES AL FINAL --- */
+.tarjeta:nth-child(2n) {
+    border-left-color: #057213;
+    color: #057213;
+}
+
+.tarjeta:nth-child(3n) {
+    border-left-color: #FC7823;
+    color: #FC7823;
+}
+
+.tarjeta:nth-child(4n) {
+    border-left-color: #583f35;
+    color: #583f35;
+}
+
+.tarjeta:nth-child(5n) {
+    border-left-color: #B94225;
+    color: #B94225;
+}
+
+.tarjeta:nth-child(6n) {
+    border-left-color: #1E7899;
+    color: #1E7899;
+}
+
+.tarjeta:nth-child(7n) {
+    border-left-color: #D6799D;
+    color: #D6799D;
+}
+
+.tarjeta:nth-child(8n) {
+    border-left-color: #00D4FC;
+    color: #00D4FC;
+}
+
+.tarjeta:nth-child(9n) {
+    border-left-color: #000000;
+    color: #000000;
+}
+
+.tarjeta:nth-child(10n) {
+    border-left-color: #93BEDB;
+    color: #93BEDB;
+}
+
+.tarjeta:nth-child(2) .color {
+    background-color: #057213;
+}
+
+.tarjeta:nth-child(3n) .color {
+    background-color: #FC7823;
+}
+
+.tarjeta:nth-child(4n) .color {
+    background-color: #583f35;
+}
+
+.tarjeta:nth-child(5n) .color {
+    background-color: #B94225;
+}
+
+.tarjeta:nth-child(6n) .color {
+    background-color: #1E7899;
+}  
+
+.tarjeta:nth-child(7n) .color {
+    background-color: #D6799D;
+}    
+
+.tarjeta:nth-child(8n) .color {
+    background-color: #00D4FC;
+}   
+
+.tarjeta:nth-child(9n) .color {
+    background-color: #000000;
+} 
+
+.tarjeta:nth-child(10n) .color {
+    background-color: #93BEDB;
+}

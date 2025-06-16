@@ -1,280 +1,753 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-    <title>One Piece</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <div class="contenedor">
-        <nav class="nav">
-            <img src="img/One-Piece-logo.svg" alt="">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Piratas</a></li>
-                <li><a href="#">Tripulaciones</a></li>
-            </ul>
-        </nav>
 
-        <main class="contenido">
-            <h1>🌊 Tripulación Sombrero de Paja</h1>
-            <div class="galeria">
-                <div class="tarjeta mugiwara">
-                    <h3>👑 Monkey D. Luffy</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/luffy.jpg">
-                            <div class="informacion">
-                                <div class="row">
-                                    <p class="color">Rol</p>
-                                    <p>Capitan</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Raza</p>
-                                    <p>Humano</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Fruta</p>
-                                    <p>Hito Hito no Mi: modelo Nika</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Origen</p>
-                                    <p>East Blue<br>(Villa Foosha)</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Edad</p>
-                                    <p>19 años</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Altura</p>
-                                    <p>174 cm</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Estado</p>
-                                    <p>Vivo</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Recompensa</p>
-                                    <p>3.000.000.000</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="descripcion">
-                            <p>
-                                 Monkey D. Luffy (モンキー・Ｄ・ルフィ Monkī Dī Rufi?), 
-                                 más conocido como Luffy «Sombrero de Paja» (麦わらのルフィ Mugiwara no Rufi?)
-                                 es el protagonista principal de la serie de manga y anime One Piece. 
-                                 Es el capitán y fundador de los Piratas de Sombrero de Paja así como 
-                                 un de los Cuatro Emperadores que gobiernan los mares del Nuevo Mundo. 
-                                 Comió una fruta del diablo llamada fruta Gomu Gomu, que le convirtió en un 
-                                 hombre de goma. Además de esto, posee varias habilidades que le hacen ser un 
-                                 pirata más que especial; un gran ejemplo de ello es la capacidad de usar el 
-                                 haoshoku haki ―que sólo lo posee una persona dentro de un millón ― y poseer 
-                                 también los otros dos tipos de haki. 
-                                 Luffy pertenece a una familia plagada de personajes conocidos mundialmente: 
-                                 es hijo del líder del Ejército Revolucionario y criminal más buscado del mundo,
-                                 Monkey D. Dragon; nieto del héroe de la Marina y anterior vicealmirante Monkey
-                                 D. Garp, hermano adoptivo del conocido pirata Ace "Puño de Fuego" 
-                                 ―antiguo comandante de la segunda división de los Piratas de Barbablanca―, 
-                                 así como del oficial general del Ejército Revolucionario, Sabo. 
-                                 Su objetivo en la vida es convertirse en el próximo Rey de los Piratas, 
-                                 encontrar el legendario tesoro conocido como el "One Piece", 
-                                 que perteneció al anterior Rey de los Piratas Gol D. Roger, y 
-                                 conquistar el Nuevo Mundo liderando una tripulación formada por grandes piratas.
-                            </p>
-                            <div class="imagenes">
-                                <img src="img/luffy_galeria1.webp" alt="">
-                                <img src="img/luffy_galeria2.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
+  <title>One Piece</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- CONTENEDOR PRINCIPAL: Barra lateral y contenido principal -->
+  <div class="contenedor">
+
+    <!-- BARRA LATERAL DE NAVEGACIÓN -->
+    <nav class="nav">
+        <img src="img/One-Piece-logo.svg" alt="" />
+        <!-- Información general sobre One Piece -->
+        <div class="info">
+            <p>One Piece es un manga escrito e 
+              ilustrado por Eiichirō Oda. Comenzó a publicarse en la revista Japonesa Weekly Shōnen Jump 
+              el 22 de julio de 1997 y a la fecha se han publicado 111 volúmenes.
+              La obra narra las aventuras de Monkey D. Luffy y su tripulación, los Piratas de Sombrero de Paja, 
+              recorriendo el mar para encontrar el legendario tesoro "One Piece" y así convertirse en 
+              el Rey de los Piratas.
+            </p>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+      <h1>🌊 Tripulación Sombrero de Paja</h1>
+      <!-- GALERÍA DE TARJETAS DE PERSONAJES -->
+      <div class="galeria">
+
+        <!-- TARJETA DE PERSONAJE: Luffy -->
+        <div class="tarjeta mugiwara">
+          <h3>👑 Monkey D. Luffy</h3>
+          <div class="content">
+            <!-- Portada con imagen y datos principales -->
+            <div class="portada">
+              <img src="img/luffy.jpg" />
+              <div class="informacion">
+                <!-- Fila de información -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Capitan</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>⚔️ Roronoa Zoro</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/zoro.jpg">
-                            <div class="informacion">
-                                <div class="row">
-                                    <p class="color">Rol</p>
-                                    <p>Combatiente</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Raza</p>
-                                    <p>Humano</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Estilo</p>
-                                    <p>Santōryū</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Origen</p>
-                                    <p>East Blue<br>(Villa Shimotsuki)</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Edad</p>
-                                    <p>21 años</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Altura</p>
-                                    <p>181 cm</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Estado</p>
-                                    <p>Vivo</p>
-                                </div>
-                                <div class="row">
-                                    <p class="color">Recompensa</p>
-                                    <p>1.111.000.000</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="descripcion">
-                            <p>
-                                Roronoa Zoro (ロロノア・ ゾロ Roronoa Zoro?), 
-                                conocido como El Cazador de Piratas (海賊狩り Kaizoku Gari?),
-                                es el primer pirata que se unió a Monkey D. Luffy, y el principal 
-                                combatiente de los Piratas de Sombrero de Paja, uno de sus dos espadachines
-                                 y uno de los oficiales principales de la Gran Flota de Sombrero de Paja, 
-                                 así como un antiguo cazarrecompensas.
-                                 Nacido en el East Blue, Zoro es hijo de Tera y Roronoa Arashi, 
-                                 nieto de Shimotsuki Furiko y Roronoa Pinzoro, y sobrino nieto de Shimotsuki 
-                                 Ushimaru, lo que le convierte en descendiente matrilineal tanto de la familia 
-                                 Shimotsuki del País de Wano como del legendario samurái Shimotsuki Ryuma.
-                                 Fue el primer miembro en unirse a la tripulación,[18] y es considerado parte 
-                                 del Trío Monstruoso (怪物三人組 Kaibutsu San-ningumi?) junto a Luffy y Sanji. 
-                                 Su sueño es convertirse en el mejor espadachín del mundo. 
-                                 Zoro junto a su capitán, también es considerado uno de los Once Supernovas que 
-                                 forman parte de «la peor generación».
-                                 Durante la Saga del East Blue tenía 2 espadas desconocidas que fueron 
-                                 destruidas por Dracule Mihawk y la Wado Ichimonji. En Loguetown consiguió 
-                                 la Sandai Kitetsu y la Yubashiri para remplazar sus espadas destruidas. 
-                                 Durante el Arco de Enies Lobby un marino oxidó y destruyó la Yubashiri, 
-                                 que fue remplazada por la Shusui que obtuvo tras derrotar a su antepasado 
-                                 Shimotsuki Ryuma durante el Arco de Thriller Bark. Durante el Arco del País 
-                                 de Wano tuvo que devolver la Shusui al País de Wano porque era un tesoro nacional 
-                                 y fue reemplazada por la Enma que se la regaló Kozuki Hiyori.
-                            </p>
-                            <div class="imagenes">
-                                <img src="img/zoro_galeria1.webp" alt="">
-                                <img src="img/zoro_galeria2.webp" alt="">
-                                <img src="img/zoro_galeria3.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>🧭 Nami</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/nami.jpg">
-                            <p>Navegante - Ladrona</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Fruta</p>
+                  <p>Hito Hito no Mi: modelo Nika</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>🎯 Usopp</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/usopp.jfif">
-                            <p>Francotirador - Rey de los Francotiradores</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>East Blue<br />(Villa Foosha)</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>👨‍🍳 Sanji</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/sanji.jpg">
-                            <p>Cocinero - Pierna Negra</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>19 años</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>🩺 Tony Tony Chopper</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/chopper.jfif">
-                            <p>Doctor - Fruta Hito Hito</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>174 cm</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>📚 Nico Robin</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/nicorobin.jfif">
-                            <p>Arqueóloga - Fruta Hana Hana</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>🔧 Franky</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/franky.jfif">
-                            <p>Carpintero - Cyborg</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p>3.000.000.000</p>
                 </div>
-                <div class="tarjeta mugiwara">
-                    <h3>🎵 Brook</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/brook.jpg">
-                            <p>Músico - Fruta Yomi Yomi</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tarjeta mugiwara">
-                    <h3>🐟 Jinbe</h3>
-                    <div class="content">
-                        <div class="portada">
-                            <img src="img/jinbe.webp">
-                            <p>Timonel - Karate Gyojin</p>
-                        </div>
-                        <div class="info">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </main>
-    </div>
-    <footer>
-        <script>
-            const $acordeon = document.querySelectorAll('.tarjeta');
-            for (let i = 0; i < $acordeon.length; i++) {
-                $acordeon[i].addEventListener('click', function () {
-                    this.classList.toggle('active')
-                })
-            }
-        </script>
-    </footer>
+            <!-- Descripción y galería de imágenes -->
+            <div class="descripcion">
+              <p>
+                Monkey D. Luffy (モンキー・Ｄ・ルフィ Monkī Dī Rufi?), más
+                conocido como Luffy «Sombrero de Paja» (麦わらのルフィ
+                Mugiwara no Rufi?) es el protagonista principal de la serie de
+                manga y anime One Piece. Es el capitán y fundador de los
+                Piratas de Sombrero de Paja así como un de los Cuatro
+                Emperadores que gobiernan los mares del Nuevo Mundo. Comió una
+                fruta del diablo llamada fruta Gomu Gomu, que le convirtió en
+                un hombre de goma. Además de esto, posee varias habilidades
+                que le hacen ser un pirata más que especial; un gran ejemplo
+                de ello es la capacidad de usar el haoshoku haki ―que sólo lo
+                posee una persona dentro de un millón ― y poseer también los
+                otros dos tipos de haki. Su objetivo en la
+                vida es convertirse en el próximo Rey de los Piratas,
+                encontrar el legendario tesoro conocido como el "One Piece",
+                que perteneció al anterior Rey de los Piratas Gol D. Roger, y
+                conquistar el Nuevo Mundo liderando una tripulación formada
+                por grandes piratas.
+              </p>
+              <div class="imagenes">
+                <img src="img/luffy_galeria1.webp" alt="" />
+                <img src="img/luffy_galeria2.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Zoro -->
+        <div class="tarjeta mugiwara">
+          <h3>⚔️ Roronoa Zoro</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/zoro.jpg" />
+              <div class="informacion">
+                <!-- Filas de información de Zoro -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Combatiente</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Santōryū</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>East Blue<br />(Villa Shimotsuki)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>21 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>181 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p>1.111.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Roronoa Zoro (ロロノア・ ゾロ Roronoa Zoro?), conocido como El
+                Cazador de Piratas (海賊狩り Kaizoku Gari?), es el primer
+                pirata que se unió a Monkey D. Luffy, y el principal
+                combatiente de los Piratas de Sombrero de Paja, uno de sus dos
+                espadachines y uno de los oficiales principales de la Gran
+                Flota de Sombrero de Paja, así como un antiguo
+                cazarrecompensas. Nacido en el East Blue, Zoro es hijo de Tera
+                y Roronoa Arashi, nieto de Shimotsuki Furiko y Roronoa
+                Pinzoro, y sobrino nieto de Shimotsuki Ushimaru, lo que le
+                convierte en descendiente matrilineal tanto de la familia
+                Shimotsuki del País de Wano como del legendario samurái
+                Shimotsuki Ryuma. Fue el primer miembro en unirse a la
+                tripulación,[18] y es considerado parte del Trío Monstruoso
+                (怪物三人組 Kaibutsu San-ningumi?) junto a Luffy y Sanji. Su
+                sueño es convertirse en el mejor espadachín del mundo. Zoro
+                junto a su capitán, también es considerado uno de los Once
+                Supernovas que forman parte de «la peor generación». Durante
+                la Saga del East Blue tenía 2 espadas desconocidas que fueron
+                destruidas por Dracule Mihawk y la Wado Ichimonji.
+              </p>
+              <div class="imagenes">
+                <img src="img/zoro_galeria1.webp" alt="" />
+                <img src="img/zoro_galeria2.webp" alt="" />
+                <img src="img/zoro_galeria3.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Nami -->
+        <div class="tarjeta mugiwara">
+          <h3>🧭 Nami</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/nami.jpg" />
+              <div class="informacion">
+                <!-- Filas de información de Nami -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Navegante</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Clima-Tact</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>East Blue<br/> (Pueblo Cocoyashi)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>20 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>170 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p>366.000.000  </p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Nami, también conocida como "La Gata Ladrona" (泥棒猫 Dorobō Neko), 
+                es la navegante de los Piratas de Sombrero de Paja. Nació en el East Blue y 
+                fue adoptada por Bell-mère, una ex-marine, junto a su hermana Nojiko. 
+                Su infancia estuvo marcada por la tragedia cuando el hombre-pez Arlong invadió su isla natal,
+                Cocoyashi, y asesinó a Bell-mère. Nami fue forzada a trabajar para Arlong como cartógrafa 
+                mientras robaba dinero para comprar la libertad de su aldea, hasta que fue liberada por Luffy y 
+                su tripulación, momento en el que se unió oficialmente a ellos.
+                Es una experta navegante y una talentosa cartógrafa, capaz de predecir y 
+                navegar a través de fenómenos climáticos extremos. Su arma principal es el Clima-Tact 
+                (天候棒 Kuraima Takuto), un bastón climático diseñado por Usopp que le permite manipular 
+                el clima para atacar, especialmente con sus técnicas basadas en truenos y tormentas. 
+                Durante el Arco de Whole Cake Island, el Clima-Tact fue mejorado con el poder
+                del homie Zeus, una nube viva creada por Big Mom. El sueño de Nami es crear un mapa completo 
+                del mundo.
+              </p>
+              <div class="imagenes">
+                <img src="img/nami.galeria2.jfif" alt="" />
+                <img src="img/nami.galeria3.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Usopp -->
+        <div class="tarjeta mugiwara">
+          <h3>🎯 Usopp</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/usopp.jfif" />
+              <div class="informacion">
+                <!-- Filas de información de Usopp -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p> Francotirador</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p> Tirador / Kabuto & Pop Greens</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>East Blue<br/>(Villa Syrup)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>19 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>176 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p> 500.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Usopp, conocido como "God Usopp" (ゴッド・ウソップ Goddo Usoppu), es el francotirador 
+                de los Piratas de Sombrero de Paja. Nació en la aldea Syrup en el East Blue, hijo de Yasopp, 
+                francotirador de los Piratas del Pelirrojo, y Banchina. Desde pequeño Usopp era conocido 
+                por ser un mentiroso compulsivo, usando sus historias para sobrellevar la enfermedad 
+                terminal de su madre. Aunque empezó como un cobarde, ha crecido hasta convertirse en 
+                un miembro valiente y confiable de la tripulación. Usopp es un maestro francotirador 
+                que utiliza una resortera llamada Kabuto, con la que dispara proyectiles especiales, 
+                incluyendo semillas Pop Green, explosivos y estrellas de humo. Durante su tiempo en el 
+                Archipiélago Boin, entrenó con Heracles para fortalecer sus habilidades. 
+                También es un habilidoso inventor y suele crear herramientas útiles para sus compañeros. 
+                En el Arco de Dressrosa, Usopp fue reconocido como un héroe por liberar a los 
+                esclavos de Sugar, ganándose el título de “God Usopp” y convirtiéndose en uno de los 
+                aliados clave dentro de la Gran Flota de Sombrero de Paja.
+              </p>
+              <div class="imagenes">
+                <img src="img/usopp.galeria1.jfif " alt="" />
+                <img src="img/usopp.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Sanji -->
+        <div class="tarjeta mugiwara">
+          <h3>👨‍🍳 Sanji</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/sanji.jpg" />
+              <div class="informacion">
+                <!-- Filas de información de Sanji -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Cocinero</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano (Modificado genéticamente - Línea Germa)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Black Leg</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>North Blue<br/>(Reino Germa → Baratie)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>21 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>180 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p>1.032.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Sanji, también conocido como "Pierna Negra" (黒足のサンジ, Kuro Ashi no Sanji), es el cocinero 
+                de los Piratas de Sombrero de Paja y uno de los miembros del Trío Monstruoso junto a 
+                Luffy y Zoro. Nació en el North Blue, en el Reino Germa, como Vinsmoke Sanji 
+                (ヴィンスモーク・サンジ), miembro de la familia real científica del Reino Germa, 
+                aunque renunció a ese nombre y a su linaje debido al abuso que sufrió en su infancia. 
+                Sanji fue entrenado desde muy joven como un soldado genéticamente modificado por su padre, 
+                Vinsmoke Judge, pero fue salvado por su madre Sora y más tarde por Zeff, un pirata y 
+                cocinero del Baratie, que se convirtió en su figura paterna. Sanji es un maestro 
+                del estilo de pelea basado exclusivamente en patadas, utilizando el estilo Diable
+                Jambe (悪魔風脚 Diaburu Janbu) que puede encender sus piernas en llamas para ejecutar 
+                poderosas técnicas. Durante el Arco de Whole Cake Island, Sanji recuperó su traje de 
+                incursión del Germa 66, que le otorgó habilidades sobrehumanas y lo llevó a aceptar 
+                parte de su herencia científica. Su sueño es encontrar el legendario mar All Blue 
+                (オールブルー Ōru Burū), donde se dice que se reúnen todos los peces del mundo. Sanji
+                también es reconocido como uno de los mejores cocineros del mundo, siempre guiado por 
+                su caballerosidad y su fuerte respeto por las mujeres.
+              </p>
+              <div class="imagenes">
+                <img src="img/sanji.galeria1.jfif" alt="" />
+                <img src="img/sanji.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Chopper -->
+        <div class="tarjeta mugiwara">
+          <h3>🩺 Tony Tony Chopper</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/chopper.jfif" />
+              <div class="informacion">
+                <!-- Filas de información de Chopper -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Médico</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Reno (Hito Hito no Mi)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Transformaciones Rumble Ball</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>Drum Island</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>17 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>90 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p> 1.000 Berries (falsamente catalogado como mascota)</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Tony Tony Chopper (トニートニー・チョッパー Tonī Tonī Chopā?) es el médico de los 
+                Piratas de Sombrero de Paja, así como uno de los oficiales principales de la Gran Flota 
+                de Sombrero de Paja. Es un reno que comió la fruta Hito Hito de la isla de Drum. Él es el 
+                sexto miembro de la tripulación y el quinto en unirse a ella.
+                Es un Reno de nariz azul que comió la fruta Hito Hito, adquiriendo forma e inteligencia humana. 
+                La mayor parte del tiempo, Chopper mantiene un tamaño pequeño, con forma de reno-humanoide 
+                (brain point); las habilidades de su fruta del diablo le permiten cambiar de apariencia 
+                dependiendo de la situación. El cuerno izquierdo de Chopper tiene una placa metálica alrededor 
+                porque se lo rompió en una pelea cuando era más joven, y Hiriluk se lo trató. Chopper tiene un 
+                rasgo destacable que ningún otro reno tiene: su nariz azul. El autor ha dicho que usa el color 
+                rosa para representarlo, que al animal al que más se parece es a un reno (obviamente) y que su 
+                comida favorita es el algodón de azúcar y las cosas dulces en general. Chopper tiene 7 años 
+                (reno), que equivalen a 15 en forma humana; es el más joven de la tripulación. También se 
+                puede decir que es el más bajo y el más alto en estatura, ya que normalmente se encuentra en 
+                "Brain Point", siendo más pequeño que todos, pero al alcanzar el "Monster Point" se hace mucho 
+                más grande. Otro detalle destacable, es que cada vez que da un paso realiza un extraño sonido. 
+                Esto ocurre en todos sus estados, excepto el "Horn point".
+              </p>
+              <div class="imagenes">
+                <img src="img/chopper.galeria1.jfif" alt="" />
+                <img src="img/chopper.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Nico Robin -->
+        <div class="tarjeta mugiwara">
+          <h3>📚 Nico Robin</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/nicorobin.jfif" />
+              <div class="informacion">
+                <!-- Filas de información de Robin -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Arqueóloga</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Hana Hana no Mi</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>West Blue<br />(Ohara)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>31 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>188 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p>930.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Nico Robin (ニコ・ロビン Niko Robin?), también conocida por sus epítetos: 
+                Niña Demonio (悪魔の子 Akuma no Ko?) y La Luz de la Revolución (革命の灯 Kakumei no Tomoshibi?) 
+                es la arqueóloga de los Piratas de Sombrero de Paja, así como una de los oficiales 
+                principales de la Gran Flota de Sombrero de Paja. Es el séptimo miembro de la tripulación 
+                y el sexto en unirse, haciéndolo al final del arco de Arabasta. Es introducida como una de 
+                los antagonistas secundarios más destacados de la saga de Arabasta siendo la vicepresidenta 
+                de Baroque Works y la mano derecha de Crocodile. Sin embargo, luego de ser salvada por 
+                Monkey D. Luffy de morir a manos de Crocodile y la posterior derrota del ex Señor de la 
+                Guerra del Mar se une a la tripulación. Dejó temporalmente a la banda durante el arco de 
+                Water 7, pero se reincorporó al final del arco de Enies Lobby tras la derrota del CP9 
+                a manos de los Piratas de Sombrero de Paja. Es la única superviviente del Clan de Ohara, 
+                sucediendo a todos sus predecesores como arqueóloga, y fue la mano derecha del jefe de la 
+                organización criminal Baroque Works bajo el alias de Miss All Sunday 
+                (ミス・オールサンデー Misu Ōrusandē?). También consumió la fruta Hana Hana. 
+                Su sueño es conocer la verdadera historia investigando en los poneglyphs.
+              </p>
+              <div class="imagenes">
+                <img src="img/robin.galeria1.jfif" alt="" />
+                <img src="img/robin.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Franky -->
+        <div class="tarjeta mugiwara">
+          <h3>🔧 Franky</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/franky.jfif" />
+              <div class="informacion">
+                <!-- Filas de información de Franky -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Carpintero</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Humano (Cyborg modificado)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Tecnología y armas integradas</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>South Blue <br /> Water 7</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>36 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>240  cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p>394.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Franky (フランキー Furankī?), apodado el Hombre de Hierro (鉄人 tetsujin?), 
+                es el carpintero naval de los Piratas de Sombrero de Paja y uno de los oficiales 
+                principales de la Gran Flota de Sombrero de Paja. Es el octavo miembro de la tripulación 
+                y el séptimo en unirse, haciéndolo al final del arco del regreso a Water 7. 
+                Nacido como Cutty Flam (カティ・フラム Kati Furamu?) y originario del South Blue, 
+                Franky fue un miembro de los Tom's Workers, hasta que un incidente que dañó su 
+                cuerpo le requirió convertirse en un cyborg para curarse. Posteriormente se convertiría 
+                en el líder de la familia Franky, un grupo de cazarrecompensas y desmanteladores de barcos, 
+                adoptando su nombre actual para ocultar su identidad. Franky y sus seguidores eran 
+                originalmente enemigos de los Sombrero de Paja al principio del arco de Water 7, 
+                hasta que las circunstancias les obligaron a convertirse en aliados al final del mismo 
+                arco y del arco de Enies Lobby. El sueño de Franky es crear un barco y circunnavegar el 
+                mundo con él, y construyó el Thousand Sunny y se unió a los Piratas de Sombrero de Paja 
+                para cumplir su sueño.
+              </p>
+              <div class="imagenes">
+                <img src="img/franky.galeria1.jfif" alt="" />
+                <img src="img/franky.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Brook -->
+        <div class="tarjeta mugiwara">
+          <h3>🎵 Brook</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/brook.jpg" />
+              <div class="informacion">
+                <!-- Filas de información de Brook -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Músico/ Espadachín secundario</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p> Esqueleto(Humano revivido - Yomi Yomi no Mi)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Espada + Música</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>West Blue</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>90 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>277 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo (reanimado)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p> 383.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Brook (ブルック Burukku?), conocido como Soul King (ソウルキング Souru Kingu?), 
+                es el músico de los Piratas de Sombrero de Paja, uno de sus dos espadachines y 
+                uno de los oficiales principales de la Gran Flota de Sombrero de Paja. 
+                Es el noveno miembro de la tripulación y el octavo en unirse, haciéndolo al 
+                final del arco de Thriller Bark. Brook consumió la fruta Yomi Yomi, que le 
+                permitió volver a la vida después de la muerte una vez. Brook aprendió con el 
+                tiempo a aprovechar más profundamente los poderes de su fruta del Diablo, dándole 
+                un control significativo sobre su propia alma y las almas de los demás. 
+                Originario del West Blue, Brook ejerció de guardia real de un reino, y posteriormente 
+                se haría miembro de los Piratas Rumbar. Murió y resucitó gracias al poder de su fruta. 
+                Sin embargo, debido al tiempo que tardó su alma en encontrar su cuerpo, quedó reducido 
+                a un esqueleto, conservando intacto únicamente su afro. Brook vagó solo por el Florian 
+                Triangle durante cincuenta años, conociendo finalmente a Luffy y sirviendo como aliado 
+                de los Sombrero de Paja durante el arco de Thriller Bark antes de unirse oficialmente a 
+                la tripulación. Su sueño es reunirse con su viejo amigo Laboon en la Reverse Mountain, 
+                donde vive con Crocus. 
+              </p>
+              <div class="imagenes">
+                <img src="img/brook.galeria1.jfif" alt="" />
+                <img src="img/brook.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE PERSONAJE: Jinbe -->
+        <div class="tarjeta mugiwara">
+          <h3>🐟 Jinbe</h3>
+          <div class="content">
+            <div class="portada">
+              <img src="img/jinbe.webp" />
+              <div class="informacion">
+                <!-- Filas de información de Jinbe -->
+                <div class="row">
+                  <p class="color">Rol</p>
+                  <p>Timonel</p>
+                </div>
+                <div class="row">
+                  <p class="color">Raza</p>
+                  <p>Hombre-Pez (Tiburón ballena)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estilo</p>
+                  <p>Karate Gyojin</p>
+                </div>
+                <div class="row">
+                  <p class="color">Origen</p>
+                  <p>Grand Line<br/>(Isla Gyojin)</p>
+                </div>
+                <div class="row">
+                  <p class="color">Edad</p>
+                  <p>46 años</p>
+                </div>
+                <div class="row">
+                  <p class="color">Altura</p>
+                  <p>301 cm</p>
+                </div>
+                <div class="row">
+                  <p class="color">Estado</p>
+                  <p>Vivo</p>
+                </div>
+                <div class="row">
+                  <p class="color">Recompensa</p>
+                  <p> 1.100.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="descripcion">
+              <p>
+                Jinbe el Caballero del Mar (海侠のジンベエ Kaikyō no Jinbē?) es el timonel de 
+                los Piratas de Sombrero de Paja y uno de los oficiales principales de la Gran Flota 
+                de Sombrero de Paja, siendo el décimo miembro de la banda y el noveno en unirse. 
+                Es un gyojin tiburón ballena, que sirvió como antiguo capitán de los Piratas del Sol 
+                y como miembro de los Siete Señores de la Guerra del Mar. Su nombre fue mencionado por 
+                primera vez por Yosaku cuando explicó el sistema de los Siete Señores de la Guerra del Mar. 
+                Sin embargo, fue introducido mucho más tarde en el arco de Impel Down. 
+                Renunció a su título como uno de los Siete Señores de la Guerra del Mar en la 
+                Batalla de Marineford, aliándose a los Piratas de Barbablanca. Durante la guerra 
+                formó una amistad con Monkey D. Luffy, y más tarde se alió con él para evitar el 
+                golpe de estado de los Nuevos Piratas Gyojin a la familia Neptune y al Reino de Ryugu. 
+                Incluso fue invitado a unirse a los Piratas de Sombrero de Paja, pero declinó debido a 
+                que aún estaba afiliado a Big Mom; sin embargo, afirmó que una vez termine sus asuntos 
+                pendientes él aceptaría y se uniría a la tripulación. Tras los hechos ocurridos en Whole 
+                Cake Island y finalizar sus cabos sueltos, Jinbe se rebeló contra la tripulación de Linlin 
+                y decidió ayudar a los de Sombrero de Paja a escapar de sus garras. Formó parte de una alianza 
+                con el equipo de recuperación de Sanji y los Piratas Fire Tank con el objetivo de asesinar a 
+                Big Mom, abandonando oficialmente su tripulación durante la boda fallida de 
+                Sanji y Charlotte Pudding.
+              </p>
+              <div class="imagenes">
+                <img src="img/jinbe.galeria1.jfif" alt="" />
+                <img src="img/jinbe.galeria2.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- FOOTER: Script para acordeón de tarjetas -->
+  <footer>
+    <script>
+      // Selecciona todos los elementos con la clase "tarjeta" (cada tarjeta de personaje)
+      const $acordeon = document.querySelectorAll(".tarjeta");
+      // Recorre todas las tarjetas encontradas
+      for (let i = 0; i < $acordeon.length; i++) {
+        // Agrega un evento de click a cada tarjeta
+        $acordeon[i].addEventListener("click", function () {
+          // Al hacer click, alterna la clase "active" para mostrar u ocultar el contenido de la tarjeta
+          this.classList.toggle("active");
+        });
+      }
+    </script>
+  </footer>
 </body>
+
 </html>
