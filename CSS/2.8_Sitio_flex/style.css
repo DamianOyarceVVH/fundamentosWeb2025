@@ -26,12 +26,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     height: 100vh;
     box-sizing: border-box;
 }
 
 .nav img {
+    width: 14em;
     margin-bottom: 1em;
+}
+
+.nav img:hover {
+    transition: all 0.3s;
+    transform: scale(1.08);
 }
 
 .nav p {
@@ -45,9 +52,15 @@ body {
     background-color: #efdeb0;
     padding: 0.5em;
     overflow-y: auto;
-    max-height: 70vh;
+    max-height: 100vh;
     width: 100%;
     box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.info:hover {
+    transform: translatey(-10px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
 }
 
 /* --- MAIN .contenido --- */
@@ -81,16 +94,15 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    padding: 3%;
     text-align: start;
     background-color: #efdeb0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
 }
 
 .tarjeta:hover {
     transform: translatey(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
 }
 
 /* --- CONTENT (dentro de TARJETA) --- */
@@ -127,6 +139,7 @@ body {
 
 .portada img {
     margin-bottom: 1em;
+    max-width: 100%;
 }
 
 /* --- INFORMACION (dentro de PORTADA) --- */
@@ -146,7 +159,7 @@ body {
 }
 
 .row p {
-    flex: 1 1 120px;      /* Mínimo 250px, crece si hay espacio */
+    flex: 1 1 100px;      /* Mínimo 250px, crece si hay espacio */
     padding: 10px;
     text-align: start;
     display: flex;
@@ -189,6 +202,7 @@ body {
 
 .imagenes img {
     margin-block: 1.5em;
+    max-width: 100%;
 }
 
 /* --- IMAGENES GENERALES EN CONTENT --- */
