@@ -1,241 +1,779 @@
+/* --- Estilos Globales --- */
 * {
+    /*
+     * box-sizing: border-box;
+     * Establece cómo se calcula el ancho y alto total de un elemento. Con 'border-box', el padding y el border se incluyen en el ancho y alto definidos, evitando problemas de diseño.
+     */
     box-sizing: border-box;
+    /*
+     * margin: 0;
+     * Elimina el margen exterior predeterminado de todos los elementos, ayudando a controlar el espaciado.
+     */
     margin: 0;
+    /*
+     * padding: 0;
+     * Elimina el padding (relleno interno) predeterminado de todos los elementos, también para un control más preciso del espaciado.
+     */
     padding: 0;
+    /*
+     * font-family: "Pirata One", system-ui;
+     * Define la fuente principal para el texto. Si "Pirata One" no está disponible, se usará una fuente del sistema.
+     */
     font-family: "Pirata One", system-ui;
+    /*
+     * font-weight: 400;
+     * Establece el grosor de la fuente. 400 generalmente corresponde a "normal".
+     */
     font-weight: 400;
+    /*
+     * font-style: normal;
+     * Define el estilo de la fuente (normal, italic, oblique). Aquí se asegura que no sea itálica.
+     */
     font-style: normal;
-    /*outline: 2px solid black;*/
+    /*
+     * /*outline: 2px solid black;* /
+     * (Comentado) Crea un contorno alrededor de los elementos, útil para depuración para ver los límites de las cajas.
+     */
 }
 
 body {
+    /*
+     * font-family: 'Segoe UI', sans-serif;
+     * Establece una fuente específica para el cuerpo del documento, con una fuente genérica de respaldo.
+     */
     font-family: 'Segoe UI', sans-serif;
+    /*
+     * background-color: #f2f4f8;
+     * Define el color de fondo del cuerpo de la página.
+     */
     background-color: #f2f4f8;
 }
 
 .contenedor {
+    /*
+     * display: flex;
+     * Convierte el contenedor en un contenedor flexbox, permitiendo alinear y distribuir elementos hijos fácilmente.
+     */
     display: flex;
+    /*
+     * height: 100vh;
+     * Establece la altura del contenedor al 100% de la altura del viewport (la ventana visible del navegador).
+     */
     height: 100vh;
 }
 
 /* --- NAV --- */
 .nav {
+    /*
+     * background-color: #113055;
+     * Define el color de fondo para la barra de navegación.
+     */
     background-color: #113055;
+    /*
+     * flex: 1;
+     * En un contenedor flex, hace que este elemento flex crezca y se encoja para ocupar el espacio disponible, con una proporción de 1.
+     */
     flex: 1;
+    /*
+     * padding: 20px;
+     * Añade un relleno interno de 20 píxeles alrededor del contenido de la barra de navegación.
+     */
     padding: 20px;
+    /*
+     * display: flex;
+     * Convierte la barra de navegación en un contenedor flex para sus propios elementos hijos.
+     */
     display: flex;
+    /*
+     * flex-direction: column;
+     * Organiza los elementos hijos de la barra de navegación en una columna vertical.
+     */
     flex-direction: column;
+    /*
+     * align-items: center;
+     * Alinea los elementos hijos a lo largo del eje transversal (horizontalmente en una columna) al centro.
+     */
     align-items: center;
+    /*
+     * justify-content: space-evenly;
+     * Distribuye el espacio entre y alrededor de los elementos hijos a lo largo del eje principal (verticalmente en una columna), con espacio uniforme.
+     */
     justify-content: space-evenly;
+    /*
+     * height: 100vh;
+     * Establece la altura de la barra de navegación al 100% de la altura del viewport.
+     */
     height: 100vh;
+    /*
+     * box-sizing: border-box;
+     * Asegura que el padding y el border se incluyan en el cálculo del ancho y alto del 'nav'.
+     */
     box-sizing: border-box;
 }
 
 .nav img {
+    /*
+     * width: 14em;
+     * Establece el ancho de las imágenes dentro de la barra de navegación a 14 veces el tamaño de la fuente actual.
+     */
     width: 14em;
+    /*
+     * margin-bottom: 1em;
+     * Añade un margen inferior a las imágenes.
+     */
     margin-bottom: 1em;
 }
 
 .nav img:hover {
+    /*
+     * transition: all 0.3s;
+     * Aplica una transición suave de 0.3 segundos a todas las propiedades CSS cuando el cursor está sobre la imagen.
+     */
     transition: all 0.3s;
+    /*
+     * transform: scale(1.08);
+     * Aumenta el tamaño de la imagen en un 8% cuando se pasa el ratón por encima.
+     */
     transform: scale(1.08);
 }
 
 .nav p {
+    /*
+     * font-size: 1.2em;
+     * Establece el tamaño de la fuente de los párrafos en la barra de navegación a 1.2 veces el tamaño de la fuente del padre.
+     */
     font-size: 1.2em;
+    /*
+     * padding: 0.5em;
+     * Añade un relleno interno a los párrafos.
+     */
     padding: 0.5em;
+    /*
+     * background-color: #e6cf9c;
+     * Define el color de fondo de los párrafos en la barra de navegación.
+     */
     background-color: #e6cf9c;
 }
 
 /* --- INFO (dentro de NAV) --- */
 .info {
+    /*
+     * background-color: #efdeb0;
+     * Define el color de fondo para el área de información.
+     */
     background-color: #efdeb0;
+    /*
+     * padding: 0.5em;
+     * Añade un relleno interno.
+     */
     padding: 0.5em;
+    /*
+     * overflow-y: auto;
+     * Si el contenido excede la altura del elemento, se mostrará una barra de desplazamiento vertical.
+     */
     overflow-y: auto;
+    /*
+     * max-height: 100vh;
+     * Establece la altura máxima al 100% de la altura del viewport.
+     */
     max-height: 100vh;
+    /*
+     * width: 100%;
+     * Hace que el elemento de información ocupe todo el ancho disponible de su contenedor.
+     */
     width: 100%;
+    /*
+     * box-sizing: border-box;
+     * Asegura que el padding se incluya en el cálculo del ancho del 'info'.
+     */
     box-sizing: border-box;
+    /*
+     * transition: all 0.3s;
+     * Aplica una transición suave de 0.3 segundos a todas las propiedades CSS en los cambios.
+     */
     transition: all 0.3s;
 }
 
 .info:hover {
+    /*
+     * transform: translatey(-10px);
+     * Mueve el elemento 10 píxeles hacia arriba cuando se pasa el ratón por encima.
+     */
     transform: translatey(-10px);
+    /*
+     * box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
+     * Añade una sombra a la caja, creando un efecto de elevación.
+     */
     box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
 }
 
 /* --- MAIN .contenido --- */
 .contenido {
+    /*
+     * flex: 5;
+     * En un contenedor flex, este elemento crecerá y se encogerá para ocupar el espacio disponible, con una proporción de 5.
+     */
     flex: 5;
+    /*
+     * padding: 30px;
+     * Añade un relleno interno de 30 píxeles.
+     */
     padding: 30px;
+    /*
+     * overflow-y: auto;
+     * Si el contenido excede la altura, se mostrará una barra de desplazamiento vertical.
+     */
     overflow-y: auto;
+    /*
+     * background-image: url('img/background.jpg');
+     * Establece una imagen de fondo para el contenido principal.
+     */
     background-image: url('img/background.jpg');
+    /*
+     * background-repeat: no-repeat;
+     * Evita que la imagen de fondo se repita.
+     */
     background-repeat: no-repeat;
+    /*
+     * background-size: cover;
+     * Escala la imagen de fondo para cubrir todo el contenedor, recortando si es necesario.
+     */
     background-size: cover;
+    /*
+     * background-position: center;
+     * Centra la imagen de fondo.
+     */
     background-position: center;
 }
 
 .contenido h1 {
+    /*
+     * background-color: #efdeb0;
+     * Define el color de fondo para los títulos de nivel 1 dentro del contenido.
+     */
     background-color: #efdeb0;
+    /*
+     * padding: 0.5em;
+     * Añade un relleno interno a los títulos.
+     */
     padding: 0.5em;
+    /*
+     * color: #113055;
+     * Define el color del texto para los títulos.
+     */
     color: #113055;
 }
 
 /* --- GALERIA --- */
 .galeria {
+    /*
+     * text-align: center;
+     * Centra el texto dentro de la galería.
+     */
     text-align: center;
+    /*
+     * display: flex;
+     * Convierte la galería en un contenedor flex.
+     */
     display: flex;
+    /*
+     * flex-direction: column;
+     * Organiza los elementos de la galería en una columna.
+     */
     flex-direction: column;
+    /*
+     * margin: 1em;
+     * Añade un margen externo alrededor de la galería.
+     */
     margin: 1em;
 }
 
 /* --- TARJETA --- */
 .tarjeta {
+    /*
+     * margin-block: 10px;
+     * Añade un margen superior e inferior de 10 píxeles.
+     */
     margin-block: 10px;
+    /*
+     * flex-wrap: wrap;
+     * Permite que los elementos flex hijos se envuelvan a la siguiente línea si no hay suficiente espacio.
+     */
     flex-wrap: wrap;
+    /*
+     * align-items: center;
+     * Alinea los elementos hijos al centro a lo largo del eje transversal.
+     */
     align-items: center;
+    /*
+     * justify-content: center;
+     * Centra los elementos hijos a lo largo del eje principal.
+     */
     justify-content: center;
+    /*
+     * padding: 3%;
+     * Añade un relleno interno del 3% del tamaño del contenedor.
+     */
     padding: 3%;
+    /*
+     * text-align: start;
+     * Alinea el texto al inicio de la línea.
+     */
     text-align: start;
+    /*
+     * background-color: #efdeb0;
+     * Define el color de fondo de las tarjetas.
+     */
     background-color: #efdeb0;
+    /*
+     * transition: all 0.3s;
+     * Aplica una transición suave de 0.3 segundos a todas las propiedades CSS.
+     */
     transition: all 0.3s;
 }
 
 .tarjeta:hover {
+    /*
+     * transform: translatey(-10px);
+     * Mueve la tarjeta 10 píxeles hacia arriba cuando se pasa el ratón por encima.
+     */
     transform: translatey(-10px);
+    /*
+     * box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
+     * Añade una sombra a la caja, creando un efecto de elevación.
+     */
     box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
 }
 
 /* --- CONTENT (dentro de TARJETA) --- */
 .content {
+    /*
+     * display: flex;
+     * Convierte el contenido en un contenedor flex.
+     */
     display: flex;
+    /*
+     * flex-wrap: wrap;
+     * Permite que los elementos hijos se envuelvan a la siguiente línea.
+     */
     flex-wrap: wrap;
+    /*
+     * flex: 2;
+     * En un contenedor flex, este elemento crecerá y se encogerá para ocupar el espacio disponible, con una proporción de 2.
+     */
     flex: 2;
+    /*
+     * text-align: center;
+     * Centra el texto dentro del contenido.
+     */
     text-align: center;
+    /*
+     * justify-content: space-between;
+     * Distribuye el espacio entre los elementos hijos a lo largo del eje principal.
+     */
     justify-content: space-between;
+    /*
+     * overflow: hidden;
+     * Oculta cualquier contenido que desborde el área del elemento.
+     */
     overflow: hidden;
+    /*
+     * max-height: 0;
+     * Establece la altura máxima inicial a 0, haciendo que el contenido esté inicialmente oculto.
+     */
     max-height: 0;
+    /*
+     * padding: 0;
+     * Elimina el padding inicial.
+     */
     padding: 0;
+    /*
+     * transition: max-height 1s cubic-bezier(0.4,0,0.2,1), padding 1s cubic-bezier(0.4,0,0.2,1);
+     * Aplica una transición de 1 segundo a las propiedades 'max-height' y 'padding' con una curva de tiempo personalizada.
+     */
     transition: max-height 1s cubic-bezier(0.4,0,0.2,1), padding 1s cubic-bezier(0.4,0,0.2,1);
 }
 
 .tarjeta.active .content {
+    /*
+     * max-height: 1000em;
+     * Cuando la tarjeta tiene la clase 'active', la altura máxima del contenido se establece a un valor grande para revelarlo.
+     */
     max-height: 1000em; /* Ajusta según el contenido máximo esperado */
+    /*
+     * padding: .7rem 0;
+     * Añade padding superior e inferior.
+     */
     padding: .7rem 0;
+    /*
+     * transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
+     * Aplica una transición más rápida (0.5s) al revelar el contenido.
+     */
     transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 
 /* --- PORTADA (dentro de CONTENT) --- */
 .portada {
+    /*
+     * background-color: #e6cf9c;
+     * Define el color de fondo para la sección de portada.
+     */
     background-color: #e6cf9c;
+    /*
+     * flex: 1;
+     * En un contenedor flex, este elemento crecerá y se encogerá con una proporción de 1.
+     */
     flex: 1;
+    /*
+     * padding: 3%;
+     * Añade un relleno interno del 3%.
+     */
     padding: 3%;
+    /*
+     * margin: 0.5em;
+     * Añade un margen externo.
+     */
     margin: 0.5em;
+    /*
+     * display: flex;
+     * Convierte la portada en un contenedor flex.
+     */
     display: flex;
+    /*
+     * flex-direction: column;
+     * Organiza los elementos en una columna.
+     */
     flex-direction: column;
+    /*
+     * align-items: center;
+     * Alinea los elementos hijos al centro horizontalmente.
+     */
     align-items: center;
+    /*
+     * justify-content: center;
+     * Centra los elementos hijos verticalmente.
+     */
     justify-content: center;
+    /*
+     * text-align: center;
+     * Centra el texto.
+     */
     text-align: center;
 }
 
 .portada img {
+    /*
+     * margin-bottom: 1em;
+     * Añade un margen inferior a las imágenes.
+     */
     margin-bottom: 1em;
+    /*
+     * max-width: 100%;
+     * Asegura que la imagen no exceda el ancho de su contenedor.
+     */
     max-width: 100%;
 }
 
 /* --- INFORMACION (dentro de PORTADA) --- */
 .informacion {
+    /*
+     * display: flex;
+     * Convierte la información en un contenedor flex.
+     */
     display: flex;
+    /*
+     * flex-direction: column;
+     * Organiza los elementos en una columna.
+     */
     flex-direction: column;
+    /*
+     * background-color: #efdeb0;
+     * Define el color de fondo.
+     */
     background-color: #efdeb0;
+    /*
+     * margin: 10px;
+     * Añade un margen externo.
+     */
     margin: 10px;
+    /*
+     * width: 100%;
+     * Ocupa todo el ancho disponible.
+     */
     width: 100%;
 }
 
 /* --- ROW (dentro de INFORMACION) --- */
 .row {
+    /*
+     * display: flex;
+     * Convierte la fila en un contenedor flex.
+     */
     display: flex;
-    flex-wrap: wrap;      /* Permite que los elementos bajen automáticamente */
+    /*
+     * flex-wrap: wrap;
+     * Permite que los elementos hijos se envuelvan a la siguiente línea.
+     */
+    flex-wrap: wrap;        /* Permite que los elementos bajen automáticamente */
+    /*
+     * width: 100%;
+     * Ocupa todo el ancho disponible.
+     */
     width: 100%;
 }
 
 .row p {
-    flex: 1 1 100px;      /* Mínimo 250px, crece si hay espacio */
+    /*
+     * flex: 1 1 100px;
+     * Los párrafos pueden crecer (1), encogerse (1), y tienen un tamaño base de 100px.
+     */
+    flex: 1 1 100px;        /* Mínimo 250px, crece si hay espacio */
+    /*
+     * padding: 10px;
+     * Añade un relleno interno.
+     */
     padding: 10px;
+    /*
+     * text-align: start;
+     * Alinea el texto al inicio.
+     */
     text-align: start;
+    /*
+     * display: flex;
+     * Convierte el párrafo en un contenedor flex.
+     */
     display: flex;
+    /*
+     * align-items: center;
+     * Alinea el contenido del párrafo al centro verticalmente.
+     */
     align-items: center;
+    /*
+     * border: 2px solid #e6cf9c;
+     * Añade un borde de 2 píxeles de ancho, sólido y de color.
+     */
     border: 2px solid #e6cf9c;
+    /*
+     * box-sizing: border-box;
+     * Asegura que el padding y el border se incluyan en el cálculo del ancho y alto del párrafo.
+     */
     box-sizing: border-box;
 }
 
 /* --- DESCRIPCION (dentro de CONTENT) --- */
 .descripcion {
+    /*
+     * background-color: #e6cf9c;
+     * Define el color de fondo para la sección de descripción.
+     */
     background-color: #e6cf9c;
+    /*
+     * padding: 2%;
+     * Añade un relleno interno del 2%.
+     */
     padding: 2%;
+    /*
+     * margin: 0.5em;
+     * Añade un margen externo.
+     */
     margin: 0.5em;
+    /*
+     * flex: 2;
+     * En un contenedor flex, este elemento crecerá y se encogerá con una proporción de 2.
+     */
     flex: 2;
+    /*
+     * display: flex;
+     * Convierte la descripción en un contenedor flex.
+     */
     display: flex;
+    /*
+     * width: 100%;
+     * Ocupa todo el ancho disponible.
+     */
     width: 100%;
+    /*
+     * flex-direction: column;
+     * Organiza los elementos en una columna.
+     */
     flex-direction: column;
+    /*
+     * justify-content: space-around;
+     * Distribuye el espacio alrededor de los elementos hijos.
+     */
     justify-content: space-around;
+    /*
+     * text-align: center;
+     * Centra el texto.
+     */
     text-align: center;
+    /*
+     * align-items: center;
+     * Alinea los elementos hijos al centro horizontalmente.
+     */
     align-items: center;
 }
 
 .descripcion p {
+    /*
+     * width: 100%;
+     * Los párrafos ocupan todo el ancho de su contenedor.
+     */
     width: 100%;
+    /*
+     * padding: 10px;
+     * Añade un relleno interno.
+     */
     padding: 10px;
+    /*
+     * color: #111;
+     * Define el color del texto.
+     */
     color: #111;
+    /*
+     * box-sizing: border-box;
+     * Asegura que el padding se incluya en el cálculo del ancho del párrafo.
+     */
     box-sizing: border-box;
 }
 
 /* --- IMAGENES (dentro de DESCRIPCION) --- */
 .imagenes {
+    /*
+     * background-color: #efdeb0;
+     * Define el color de fondo para la sección de imágenes.
+     */
     background-color: #efdeb0;
+    /*
+     * display: flex;
+     * Convierte la sección de imágenes en un contenedor flex.
+     */
     display: flex;
+    /*
+     * flex-wrap: wrap;
+     * Permite que las imágenes se envuelvan a la siguiente línea.
+     */
     flex-wrap: wrap;
+    /*
+     * justify-content: space-evenly;
+     * Distribuye el espacio uniformemente alrededor de las imágenes.
+     */
     justify-content: space-evenly;
+    /*
+     * align-items: center;
+     * Alinea las imágenes al centro verticalmente.
+     */
     align-items: center;
+    /*
+     * box-sizing: border-box;
+     * Asegura que el padding se incluya en el cálculo del ancho.
+     */
     box-sizing: border-box;
+    /*
+     * width: 100%;
+     * Ocupa todo el ancho disponible.
+     */
     width: 100%;
 }
 
 .imagenes img {
+    /*
+     * margin-block: 1.5em;
+     * Añade un margen superior e inferior.
+     */
     margin-block: 1.5em;
+    /*
+     * max-width: 100%;
+     * Asegura que la imagen no exceda el ancho de su contenedor.
+     */
     max-width: 100%;
 }
 
 /* --- IMAGENES GENERALES EN CONTENT --- */
 .content img {
+    /*
+     * height: 225px;
+     * Establece una altura fija para las imágenes dentro del contenido.
+     */
     height: 225px;
 }
 
 /* --- MUGIWARA --- */
 .mugiwara {
+    /*
+     * border-left: 5px solid #9B000F;
+     * Añade un borde izquierdo de 5 píxeles de ancho, sólido y de color específico.
+     */
     border-left: 5px solid #9B000F;
+    /*
+     * color: #9B000F;
+     * Define el color del texto.
+     */
     color: #9B000F;
 }
 
 .mugiwara h3 {
+    /*
+     * margin-bottom: 3px;
+     * Añade un margen inferior a los títulos de nivel 3.
+     */
     margin-bottom: 3px;
+    /*
+     * font-size: 2em;
+     * Establece el tamaño de la fuente.
+     */
     font-size: 2em;
+    /*
+     * padding: 5px;
+     * Añade un relleno interno.
+     */
     padding: 5px;
+    /*
+     * cursor: pointer;
+     * Cambia el cursor a un puntero cuando se pasa sobre el elemento, indicando que es interactivo.
+     */
     cursor: pointer;
 }
 
 .mugiwara p {
+    /*
+     * font-size: 1.2em;
+     * Establece el tamaño de la fuente de los párrafos.
+     */
     font-size: 1.2em;
+    /*
+     * font-weight: 500;
+     * Establece el grosor de la fuente a 500 (seminegrita).
+     */
     font-weight: 500;
+    /*
+     * width: 100%;
+     * Ocupa todo el ancho de su contenedor.
+     */
     width: 100%;
 }
 
 /* --- COLOR --- */
 .color {
+    /*
+     * background-color: #9B000F;
+     * Define el color de fondo.
+     */
     background-color: #9B000F;
+    /*
+     * color: #fff;
+     * Define el color del texto a blanco.
+     */
     color: #fff;
 }
 
 /* --- NTH-CHILD Y VARIANTES AL FINAL --- */
+/*
+ * Las reglas nth-child(Xn) seleccionan elementos en una secuencia.
+ * nth-child(2n) selecciona cada segundo elemento (2do, 4to, 6to, etc.).
+ * nth-child(3n) selecciona cada tercer elemento (3ro, 6to, 9no, etc.).
+ * Y así sucesivamente, aplicando un borde izquierdo y color de texto diferente a las tarjetas.
+ */
 .tarjeta:nth-child(2n) {
     border-left-color: #057213;
     color: #057213;
@@ -281,6 +819,11 @@ body {
     color: #93BEDB;
 }
 
+/*
+ * Estas reglas nth-child(Xn) .color seleccionan el elemento con la clase 'color'
+ * dentro de cada enésima tarjeta, y le aplican un color de fondo diferente
+ * para que coincida con el borde izquierdo de la tarjeta.
+ */
 .tarjeta:nth-child(2) .color {
     background-color: #057213;
 }
@@ -299,19 +842,19 @@ body {
 
 .tarjeta:nth-child(6n) .color {
     background-color: #1E7899;
-}  
+}
 
 .tarjeta:nth-child(7n) .color {
     background-color: #D6799D;
-}    
+}
 
 .tarjeta:nth-child(8n) .color {
     background-color: #00D4FC;
-}   
+}
 
 .tarjeta:nth-child(9n) .color {
     background-color: #000000;
-} 
+}
 
 .tarjeta:nth-child(10n) .color {
     background-color: #93BEDB;
