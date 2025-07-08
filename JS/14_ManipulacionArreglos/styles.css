@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    outline: 2px solid black;
 }
 
 body {
@@ -78,15 +79,20 @@ span {
 }
 
 /* Cajas secundarias (características) */
-.box-3, .box-4, .box-5 {
+.box-3, .box-4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     background-color: #D35400;
     flex: 1;
     margin: 6px;
     border-radius: 8px;
-    padding: 30px 20px 40px 20px;
+    padding: 20px 20px 30px 20px;
 }
 
-#promedios, #separador {
+#separador {
     padding: 10px 14px 10px 14px;
     font-size: 100%;
     background-color: #34495E;
