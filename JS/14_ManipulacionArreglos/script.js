@@ -47,7 +47,7 @@ function agrElemInverso() {
 // Ejercicio 7: Historial de mensajes
 function historial() {
     let historial = [];
-    historial.push("Hola", "mucho", "gusto");
+    historial.push("Google", "Facebook", "Youtube");
     alert(`Historial de mensajes (push):\n${historial.join(", ")}`);
     let ultimo = historial.pop();
     alert(`Mensaje eliminado: ${ultimo}`);
@@ -73,8 +73,51 @@ function reordenarNomb() {
     alert(`Nombres actualizados (push):\n${nombres.join(" - ")}`);
 }
 
-// 🧠 Ejercicio 10: Pilas y colas
+// Ejercicio 10: Pilas y colas
 function pilasColas() {
-    pila = []
-    pila.push("", "", "")
+    let pila = [];
+    alert(`Cargas de la pila: ${pila.join(" - ")}`);
+    pila.push("carga1", "carga2", "carga3");
+    let eliminar = pila.pop(2);
+    alert(`Cargas de la pila (pop): ${eliminar.join(" - ")}`);
+
+    let colaNueva = [];
+    colaNueva.push("primero", "segundo","tercero");
+    alert(`Cola de espera: ${colaNueva.join(" - ")}`);
+    let atendido = colaNueva.shift(2);
+    alert(`Atendidos (shift): ${atendido.join(" - ")}`);
+}
+
+// Ejercicio 11: Completar la semana laboral
+function semLaboral() {
+    let dias = ["lunes", "miércoles", "jueves"];
+    alert(`Arreglo inicial: ${dias.join(" - ")}`);
+    dias.push("viernes");
+    dias.shift();
+    dias.unshift("lunes", "miercoles");
+    alert(`Arreglo final: ${dias.join(" - ")}`);
+}
+
+// Ejercicio 12: Registro de personas en una sala
+function regPersonas() {
+    let personas = ["Carlos", "María", "Luis", "Ana", "Sofía"];
+    alert(`Arreglo inicial: ${personas.join(" - ")}`);
+    personas.shift();
+    personas.pop();
+    personas.pop();
+    personas.unshift("Pedro");
+    alert(`Arreglo final: ${personas.join(" - ")}`);
+    personas.push("Ana", "Sofía");
+}
+
+// Ejercicio 13: Lista de tareas actualizada
+function lisTareas() {
+    let tareas = ["comer", "estudiar", "dormir", "jugar", "ver TV", "navegar"];
+    alert(`Arreglo inicial: ${tareas.join(" - ")}`);
+    tareas.pop();
+    tareas.pop();
+    tareas.pop();
+    tareas.pop();
+    tareas.push("lavar la ropa", "organizar escritorio");
+    alert(`Arreglo final: ${tareas.join(" - ")}`);
 }
