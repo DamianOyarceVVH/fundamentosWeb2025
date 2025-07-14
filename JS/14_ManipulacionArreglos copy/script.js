@@ -36,7 +36,7 @@ function agregarElemento2() {
     const valor = input.value.trim(); // Guarda valor sin espacios extras
 
     if (valor === "") return;
-    carrito.push(valor); // Agrega valor al final
+    carrito.push("> " + valor); // Agrega valor al final
     input.value = "";
     input.focus(); // Agrega foco hacia el input
 
@@ -49,4 +49,61 @@ function eliminarUltimoElemento() {
     }
 
     mostrarListaCompra()
+}
+
+let colores = [];
+function agregarInicio() {
+    const input = document.getElementById("lista3");
+    const valor = input.value.trim(); // Guarda valor sin espacios extras
+
+    if (valor === "") return;
+    colores.unshift("> " + valor); // Agrega valor al inicio
+    input.value = "";
+    input.focus(); // Agrega foco hacia el input
+
+    mostrarListaColores()
+}
+
+function mostrarListaColores() {
+    const lista = document.getElementById("resultado3");
+    lista.innerHTML = ""; // Limpiar antes de mostrar la lista
+
+    for (let i = 0; i < colores.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2"
+        li.textContent = `${colores[i]}`;
+        lista.appendChild(li) // Agrega elementos a la lista
+    }
+}
+
+function agregarInicio2() {
+    const input = document.getElementById("lista4");
+    const valor = input.value.trim(); // Guarda valor sin espacios extras
+
+    if (valor === "") return;
+    frutas.unshift("> " + valor); // Agrega valor al inicio
+    input.value = "";
+    input.focus(); // Agrega foco hacia el input
+
+    mostrarListaColores2()
+}
+
+function eliminarPrimerElemento() {
+    if (colores.length > 0) {
+        colores.shift();
+    }
+
+    mostrarListaColores2()
+}
+
+function mostrarListaColores2() {
+    const lista = document.getElementById("resultado4");
+    lista.innerHTML = ""; // Limpiar antes de mostrar la lista
+
+    for (let i = 0; i < frutas.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2"
+        li.textContent = `${colores[i]}`;
+        lista.appendChild(li) // Agrega elementos a la lista
+    }
 }
