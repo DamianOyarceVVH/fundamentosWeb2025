@@ -1,109 +1,192 @@
-console.log("Vinculado correctamente...")
+console.log("Vinculado correctamente...");
 
-/*🧠 Ejercicio 1: Agregar elementos
-Crea un arreglo vacío llamado compras.
-Usa push() para agregar los siguientes elementos:
-"pan", "leche" y "huevos".
-Muestra el arreglo resultante  en html.
-*/
-
+/* 🧠 Ejercicio 1: Agregar lista de compras */
 const resultado = document.getElementById("resultado");
-function agregarElementoCompra(){
-     //valor input
+function agregarElementoCompra() {
     let elemento = document.getElementById("lista").value;
-    //Crear elemento HTML --> CreateElement
     let item = document.createElement("li");
-    item.innerText = elemento; //<li>--InnerText--</li>
-    //appendChild inserta valor hijo en Padre
-    // resultado(<ul>(item(<li></li>))</ul>)
+    item.innerText = elemento;
     resultado.appendChild(item);
 }
+
+/* 🧠 Ejercicio 2: Eliminar último elemento */
 let carrito = [];
-function mostrarListaCompra() {
-    const lista = document.getElementById("resultado2");
-    lista.innerHTML = ""; // Limpiar antes de mostrar la lista
-
-    for (let i = 0; i < carrito.length; i++) {
-        const li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2"
-        li.textContent = `${carrito[i]}`;
-        lista.appendChild(li) // Agrega elementos a la lista
-    }
-}
-
 function agregarElemento2() {
     const input = document.getElementById("lista2");
-    const valor = input.value.trim(); // Guarda valor sin espacios extras
-
+    const valor = input.value.trim();
     if (valor === "") return;
-    carrito.push("> " + valor); // Agrega valor al final
+    carrito.push("> " + valor);
     input.value = "";
-    input.focus(); // Agrega foco hacia el input
-
-    mostrarListaCompra()
+    input.focus();
+    mostrarListaCompra();
 }
 
 function eliminarUltimoElemento() {
     if (carrito.length > 0) {
         carrito.pop();
     }
-
-    mostrarListaCompra()
+    mostrarListaCompra();
 }
 
+function mostrarListaCompra() {
+    const lista = document.getElementById("resultado2");
+    lista.innerHTML = "";
+    for (let i = 0; i < carrito.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${carrito[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+/* 🧠 Ejercicio 3: Agregar al inicio */
 let colores = [];
 function agregarInicio() {
     const input = document.getElementById("lista3");
-    const valor = input.value.trim(); // Guarda valor sin espacios extras
-
+    const valor = input.value.trim();
     if (valor === "") return;
-    colores.unshift("> " + valor); // Agrega valor al inicio
+    colores.unshift("> " + valor);
     input.value = "";
-    input.focus(); // Agrega foco hacia el input
-
-    mostrarListaColores()
+    input.focus();
+    mostrarListaColores();
 }
 
 function mostrarListaColores() {
     const lista = document.getElementById("resultado3");
-    lista.innerHTML = ""; // Limpiar antes de mostrar la lista
-
+    lista.innerHTML = "";
     for (let i = 0; i < colores.length; i++) {
         const li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2"
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
         li.textContent = `${colores[i]}`;
-        lista.appendChild(li) // Agrega elementos a la lista
+        lista.appendChild(li);
     }
 }
 
+/* 🧠 Ejercicio 4: Quitar el primero */
+let colores2 = [];
+let eliminados = [];
 function agregarInicio2() {
     const input = document.getElementById("lista4");
-    const valor = input.value.trim(); // Guarda valor sin espacios extras
-
+    const valor = input.value.trim();
     if (valor === "") return;
-    frutas.unshift("> " + valor); // Agrega valor al inicio
+    colores2.unshift("> " + valor);
     input.value = "";
-    input.focus(); // Agrega foco hacia el input
-
-    mostrarListaColores2()
+    input.focus();
+    mostrarListaColores2();
 }
 
 function eliminarPrimerElemento() {
-    if (colores.length > 0) {
-        colores.shift();
+    if (colores2.length > 0) {
+        const eliminado = colores2.shift();
+        eliminados.push(eliminado);
     }
-
-    mostrarListaColores2()
+    // Mostrar los elementos eliminados completos
+    const lista = document.getElementById("eliminado");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados[i];
+        lista.appendChild(li);
+    }
+    mostrarListaColores2();
 }
 
 function mostrarListaColores2() {
     const lista = document.getElementById("resultado4");
-    lista.innerHTML = ""; // Limpiar antes de mostrar la lista
-
-    for (let i = 0; i < frutas.length; i++) {
+    lista.innerHTML = "";
+    for (let i = 0; i < colores2.length; i++) {
         const li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2"
-        li.textContent = `${colores[i]}`;
-        lista.appendChild(li) // Agrega elementos a la lista
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${colores2[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+/* 🧠 Ejercicio 5: Combinación de métodos */
+let numeros = [];
+let eliminados2 = [];
+
+function agregarFinal() {
+    const input = document.getElementById("lista5");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    numeros.push("> " + valor);
+    input.value = "";
+    input.focus();
+    mostrarListaNumeros();
+}
+
+function agregarInicio3() {
+    const input = document.getElementById("lista5");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    numeros.unshift("> " + valor);
+    input.value = "";
+    input.focus();
+    mostrarListaNumeros();
+}
+
+function eliminarPrimerElemento2() {
+    if (numeros.length > 0) {
+        const eliminado = numeros.shift();
+        eliminados2.push(eliminado);
+    }
+    mostrarEliminados2();
+    mostrarListaNumeros();
+}
+
+function eliminarUltimoElemento2() {
+    if (numeros.length > 0) {
+        const eliminado = numeros.pop();
+        eliminados2.push(eliminado);
+    }
+    mostrarEliminados2();
+    mostrarListaNumeros();
+}
+
+function mostrarListaNumeros() {
+    const lista = document.getElementById("resultado5");
+    lista.innerHTML = "";
+    for (let i = 0; i < numeros.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${numeros[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+function mostrarEliminados2() {
+    const lista = document.getElementById("eliminado3");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados2.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados2[i];
+        lista.appendChild(li);
+    }
+}
+
+// 🧠 Ejercicio 6: Agregar elementos en orden inverso
+let elementos = [];
+function agregarInicio2() {
+    const input = document.getElementById("lista6");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    elementos.unshift("> " + valor);
+    input.value = "";
+    input.focus();
+
+    mostrarListaInversa();
+}
+
+function mostrarListaInversa() {
+    const lista = document.getElementById("resultado6");
+    lista.innerHTML = "";
+    for (let i = 0; i < elementos.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${elementos[i]}`;
+        lista.appendChild(li);
     }
 }
