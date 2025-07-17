@@ -1,123 +1,411 @@
-console.log("Vinculado correctamente...")
-
-// Ejercicio 1: Agregar elementos
-function agrElementos() {
-    let compras = [];
-    compras.push("pan", "leche", "huevos");
-    alert(`Compras: ${compras.join(", ")}`);
-
-    // Ejercicio 2: Quitar el último
-    ultimo = compras.pop();
-    alert(`Compras (pop): ${compras.join(", ")}`);
+console.log("Vinculado correctamente...");
+// Función capitalize para poner en mayúscula la primera letra
+function capitalize(texto) {
+    if (!texto) return "";
+    return texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase();
 }
 
-// Ejercicio 3: Agregar al inicio
-function agrInicio() {
-    let colores = ["rojo", "azul"];
-    alert(`Colores: ${colores.join(", ")}`);
-    colores.unshift("amarillo");
-    alert(`Colores (unshift): ${colores.join(", ")}`);
-    
-    // Ejercicio 4: Quitar el primero
-    ultimo = colores.shift();
-    alert(`Color eliminado: ${ultimo}`);
+/* 🧠 Ejercicio 1: Agregar lista de compras */
+const resultado = document.getElementById("resultado");
+function agregarElementoCompra() {
+    let elemento = document.getElementById("lista").value;
+    let item = document.createElement("li");
+    item.innerText = capitalize(elemento);
+    resultado.appendChild(item);
 }
 
-//Ejercicio 5: Combinación de métodos
-function combMetodos() {
-    let numeros = [10, 20, 30];
-    alert(`Números: ${numeros.join(", ")}`);
-    numeros.push(40);
-    alert(`Números (push): ${numeros.join(", ")}`);
-    let primero = numeros.shift();
-    alert(`Números (shift): ${numeros.join(", ")}`);
-    numeros.unshift(5);
-    alert(`Números (unshift): ${numeros.join(", ")}`);
-    let ultimo = numeros.pop();
-    alert(`Números (pop): ${numeros.join(", ")}`);
+/* 🧠 Ejercicio 2: Eliminar último elemento */
+let carrito = [];
+function agregarElemento2() {
+    const input = document.getElementById("lista2");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    carrito.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaCompra();
+}
+function eliminarUltimoElemento() {
+    if (carrito.length > 0) {
+        carrito.pop();
+    }
+    mostrarListaCompra();
+}
+function mostrarListaCompra() {
+    const lista = document.getElementById("resultado2");
+    lista.innerHTML = "";
+    for (let i = 0; i < carrito.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${carrito[i]}`;
+        lista.appendChild(li);
+    }
 }
 
-// Ejercicio 6: Combinación de métodos
-function agrElemInverso() {
-    let orden = [];
-    orden.unshift(1, 2, 3);
-    alert(`Orden: ${orden.join(", ")}`);
+/* 🧠 Ejercicio 3: Agregar al inicio */
+let colores = [];
+function agregarInicio() {
+    const input = document.getElementById("lista3");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    colores.unshift("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaColores();
+}
+function mostrarListaColores() {
+    const lista = document.getElementById("resultado3");
+    lista.innerHTML = "";
+    for (let i = 0; i < colores.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${colores[i]}`;
+        lista.appendChild(li);
+    }
 }
 
-// Ejercicio 7: Historial de mensajes
-function historial() {
-    let historial = [];
-    historial.push("Google", "Facebook", "Youtube");
-    alert(`Historial de mensajes (push):\n${historial.join(", ")}`);
-    let ultimo = historial.pop();
-    alert(`Mensaje eliminado: ${ultimo}`);
+/* 🧠 Ejercicio 4: Quitar el primero */
+let colores2 = [];
+let eliminados = [];
+function agregarInicio2() {
+    const input = document.getElementById("lista4");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    colores2.unshift("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaColores2();
+}
+function eliminarPrimerElemento() {
+    if (colores2.length > 0) {
+        const eliminado = colores2.shift();
+        eliminados.push(eliminado);
+    }
+    // Mostrar los elementos eliminados completos
+    const lista = document.getElementById("eliminado");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados[i];
+        lista.appendChild(li);
+    }
+    mostrarListaColores2();
+}
+function mostrarListaColores2() {
+    const lista = document.getElementById("resultado4");
+    lista.innerHTML = "";
+    for (let i = 0; i < colores2.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${colores2[i]}`;
+        lista.appendChild(li);
+    }
 }
 
-// Ejercicio 8: Cola de atención
-function colaAtencion() {
-    cola = ["Cliente1", "Cliente2", "Cliente3"];
-    eliminado = cola.shift();
-    cola.push("Cliente4");
-    alert(`Cola final: ${cola.join(" - ")}`);
+/* 🧠 Ejercicio 5: Combinación de métodos */
+let numeros = [];
+let eliminados2 = [];
+
+function agregarFinal() {
+    const input = document.getElementById("lista5");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    numeros.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaNumeros();
 }
 
-// Ejercicio 9: Reordenar nombres
-function reordenarNomb() {
-    nombres = ["Pedro", "Juan", "Luis"];
-    alert(`Nombres:\n${nombres.join(" - ")}`);
-    eliminado = nombre.pop();
-    alert(`Nombres (pop):\n${nombres.join(" - ")}`);
-    nombre.unshift("Mateo");
-    alert(`Nombres (unshift):\n${nombres.join(" - ")}`);
-    nombre.push("Ana");
-    alert(`Nombres actualizados (push):\n${nombres.join(" - ")}`);
+function agregarInicio3() {
+    const input = document.getElementById("lista5");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    numeros.unshift("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaNumeros();
 }
 
-// Ejercicio 10: Pilas y colas
-function pilasColas() {
-    let pila = [];
-    alert(`Cargas de la pila: ${pila.join(" - ")}`);
-    pila.push("carga1", "carga2", "carga3");
-    let eliminar = pila.pop(2);
-    alert(`Cargas de la pila (pop): ${eliminar.join(" - ")}`);
-
-    let colaNueva = [];
-    colaNueva.push("primero", "segundo","tercero");
-    alert(`Cola de espera: ${colaNueva.join(" - ")}`);
-    let atendido = colaNueva.shift(2);
-    alert(`Atendidos (shift): ${atendido.join(" - ")}`);
+function eliminarPrimerElemento2() {
+    if (numeros.length > 0) {
+        const eliminado = numeros.shift();
+        eliminados2.push(eliminado);
+    }
+    mostrarEliminados2();
+    mostrarListaNumeros();
 }
 
-// Ejercicio 11: Completar la semana laboral
-function semLaboral() {
-    let dias = ["lunes", "miércoles", "jueves"];
-    alert(`Arreglo inicial: ${dias.join(" - ")}`);
-    dias.push("viernes");
-    dias.shift();
-    dias.unshift("lunes", "miercoles");
-    alert(`Arreglo final: ${dias.join(" - ")}`);
+function eliminarUltimoElemento2() {
+    if (numeros.length > 0) {
+        const eliminado = numeros.pop();
+        eliminados2.push(eliminado);
+    }
+    mostrarEliminados2();
+    mostrarListaNumeros();
 }
 
-// Ejercicio 12: Registro de personas en una sala
-function regPersonas() {
-    let personas = ["Carlos", "María", "Luis", "Ana", "Sofía"];
-    alert(`Arreglo inicial: ${personas.join(" - ")}`);
-    personas.shift();
-    personas.pop();
-    personas.pop();
-    personas.unshift("Pedro");
-    alert(`Arreglo final: ${personas.join(" - ")}`);
-    personas.push("Ana", "Sofía");
+function mostrarListaNumeros() {
+    const lista = document.getElementById("resultado5");
+    lista.innerHTML = "";
+    for (let i = 0; i < numeros.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${numeros[i]}`;
+        lista.appendChild(li);
+    }
 }
 
-// Ejercicio 13: Lista de tareas actualizada
-function lisTareas() {
-    let tareas = ["comer", "estudiar", "dormir", "jugar", "ver TV", "navegar"];
-    alert(`Arreglo inicial: ${tareas.join(" - ")}`);
-    tareas.pop();
-    tareas.pop();
-    tareas.pop();
-    tareas.pop();
-    tareas.push("lavar la ropa", "organizar escritorio");
-    alert(`Arreglo final: ${tareas.join(" - ")}`);
+function mostrarEliminados2() {
+    const lista = document.getElementById("eliminado3");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados2.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados2[i];
+        lista.appendChild(li);
+    }
+}
+
+// 🧠 Ejercicio 6: Agregar elementos en orden inverso
+let elementos = [];
+function agregarInicio2() {
+    const input = document.getElementById("lista6");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    elementos.unshift("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+
+    mostrarListaInversa();
+}
+
+function mostrarListaInversa() {
+    const lista = document.getElementById("resultado6");
+    lista.innerHTML = "";
+    for (let i = 0; i < elementos.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${elementos[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+// 🧠 Ejercicio 7: Historial de mensajes
+let historial = []
+let eliminados4 = []
+function agregarFinal2() {
+    const input = document.getElementById("lista7");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    historial.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaMensajes();
+}
+
+function eliminarUltimoElemento3() {
+    if (historial.length > 0) {
+        const eliminado = historial.pop();
+        eliminados4.push(eliminado);
+    }
+    mostrarEliminados3();
+    mostrarListaMensajes();
+}
+
+function mostrarListaMensajes() {
+    const lista = document.getElementById("resultado7");
+    lista.innerHTML = "";
+    for (let i = 0; i < historial.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${historial[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+function mostrarEliminados3() {
+    const lista = document.getElementById("eliminado4");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados4.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados4[i];
+        lista.appendChild(li);
+    }
+}
+
+// 🧠 Ejercicio 8: Cola de atención
+let cola = []
+let eliminados5 = []
+function agregarFinal3() {
+    const input = document.getElementById("lista8");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    cola.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarColaAtencion();
+}
+
+function eliminarPrimerElemento3() {
+    if (cola.length > 0) {
+        const eliminado = cola.shift();
+        eliminados5.push(eliminado);
+    }
+    mostrarEliminados5();
+    mostrarColaAtencion();
+}
+
+function mostrarColaAtencion() {
+    const lista = document.getElementById("resultado8");
+    lista.innerHTML = "";
+    for (let i = 0; i < cola.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${cola[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+function mostrarEliminados5() {
+    const lista = document.getElementById("eliminado5");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados5.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados5[i];
+        lista.appendChild(li);
+    }
+}
+
+// 🧠 Ejercicio 9: Reordenar nombres
+let nombres = []
+function agregarInicio4() {
+    const input = document.getElementById("lista9");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    nombres.unshift("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+
+    mostrarListaNombres();
+}
+
+function agregarFinal4() {
+    const input = document.getElementById("lista9");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    nombres.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaNombres();
+}
+
+function eliminarUltimoElemento4() {
+    if (nombres.length > 0) {
+        nombres.pop();
+    }
+    mostrarListaNombres();
+}
+
+function mostrarListaNombres() {
+    const lista = document.getElementById("resultado9");
+    lista.innerHTML = "";
+    for (let i = 0; i < nombres.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${nombres[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+// --- PILA ---
+let pila = [];
+let cargasGastadas = [];
+
+function agregarFinal5() {
+    const input = document.getElementById("lista10");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    pila.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarCargas();
+}
+
+function eliminarUltimoElemento5() {
+    if (pila.length > 0) {
+        const eliminado = pila.pop();
+        cargasGastadas.push(eliminado);
+    }
+    mostrarCargas();
+    mostrarEliminados6();
+}
+
+function mostrarCargas() {
+    const lista = document.getElementById("resultado10");
+    lista.innerHTML = "";
+    for (let i = 0; i < pila.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${pila[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+function mostrarEliminados6() {
+    const lista = document.getElementById("eliminado6");
+    lista.innerHTML = "";
+    for (let i = 0; i < cargasGastadas.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = cargasGastadas[i];
+        lista.appendChild(li);
+    }
+}
+
+// --- COLA ---
+let colaNueva = [];
+let clientesAtendidos = [];
+
+function agregarFinal6() {
+    const input = document.getElementById("lista11");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    colaNueva.push("> " + capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarClientes();
+}
+
+function eliminarPrimerElemento4() {
+    if (colaNueva.length > 0) {
+        const eliminado = colaNueva.shift();
+        clientesAtendidos.push(eliminado);
+    }
+    mostrarClientes();
+    mostrarEliminados7();
+}
+
+function mostrarClientes() {
+    const lista = document.getElementById("resultado11");
+    lista.innerHTML = "";
+    for (let i = 0; i < colaNueva.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = `${colaNueva[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+function mostrarEliminados7() {
+    const lista = document.getElementById("eliminado7");
+    lista.innerHTML = "";
+    for (let i = 0; i < clientesAtendidos.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = clientesAtendidos[i];
+        lista.appendChild(li);
+    }
 }
