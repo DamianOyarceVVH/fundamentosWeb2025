@@ -67,6 +67,7 @@ function mostrarListaColores() {
 /* 🧠 Ejercicio 4: Quitar el primero */
 let colores2 = [];
 let eliminados = [];
+
 function agregarInicio2() {
     const input = document.getElementById("lista4");
     const valor = input.value.trim();
@@ -76,29 +77,34 @@ function agregarInicio2() {
     input.focus();
     mostrarListaColores2();
 }
+
 function eliminarPrimerElemento() {
     if (colores2.length > 0) {
         const eliminado = colores2.shift();
         eliminados.push(eliminado);
     }
-    // Mostrar los elementos eliminados completos
-    const lista = document.getElementById("eliminado");
-    lista.innerHTML = "";
-    for (let i = 0; i < eliminados.length; i++) {
-        const li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
-        li.textContent = eliminados[i];
-        lista.appendChild(li);
-    }
+    mostrarEliminados();
     mostrarListaColores2();
 }
+
 function mostrarListaColores2() {
     const lista = document.getElementById("resultado4");
     lista.innerHTML = "";
     for (let i = 0; i < colores2.length; i++) {
         const li = document.createElement("li");
         li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
-        li.textContent = `${colores2[i]}`;
+        li.textContent = colores2[i];
+        lista.appendChild(li);
+    }
+}
+
+function mostrarEliminados() {
+    const lista = document.getElementById("eliminado");
+    lista.innerHTML = "";
+    for (let i = 0; i < eliminados.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
+        li.textContent = eliminados[i];
         lista.appendChild(li);
     }
 }
@@ -320,7 +326,7 @@ function mostrarListaNombres() {
     }
 }
 
-// --- PILA ---
+// 🧠 Ejercicio 10: Pilas y colas
 let pila = [];
 let cargasGastadas = [];
 
@@ -365,7 +371,6 @@ function mostrarEliminados6() {
     }
 }
 
-// --- COLA ---
 let colaNueva = [];
 let clientesAtendidos = [];
 
