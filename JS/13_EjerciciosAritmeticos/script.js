@@ -35,3 +35,4 @@ function separador() {
     }
     alert(`Números ingresados:\n· Pares: ${pares.join(" - ")}\n· Impares: ${impares.join(" - ")}`);
 }
+
