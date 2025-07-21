@@ -175,7 +175,7 @@ function mostrarEliminados2() {
 
 // 🧠 Ejercicio 6: Agregar elementos en orden inverso
 let elementos = [];
-function agregarInicio2() {
+function agregarInicio4() {
     const input = document.getElementById("lista6");
     const valor = input.value.trim();
     if (valor === "") return;
@@ -287,7 +287,7 @@ function mostrarEliminados5() {
 
 // 🧠 Ejercicio 9: Reordenar nombres
 let nombres = []
-function agregarInicio4() {
+function agregarInicio5() {
     const input = document.getElementById("lista9");
     const valor = input.value.trim();
     if (valor === "") return;
@@ -327,6 +327,7 @@ function mostrarListaNombres() {
 }
 
 // 🧠 Ejercicio 10: Pilas y colas
+
 let pila = [];
 let cargasGastadas = [];
 
@@ -355,7 +356,7 @@ function mostrarCargas() {
     for (let i = 0; i < pila.length; i++) {
         const li = document.createElement("li");
         li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
-        li.textContent = `${pila[i]}`;
+        li.textContent = pila[i];
         lista.appendChild(li);
     }
 }
@@ -399,7 +400,7 @@ function mostrarClientes() {
     for (let i = 0; i < colaNueva.length; i++) {
         const li = document.createElement("li");
         li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2";
-        li.textContent = `${colaNueva[i]}`;
+        li.textContent = colaNueva[i];
         lista.appendChild(li);
     }
 }
@@ -414,3 +415,100 @@ function mostrarEliminados7() {
         lista.appendChild(li);
     }
 }
+
+/* 🧩 Ejercicio 11: Completar la semana laboral */
+let dias = ["Lunes", "Miercoles", "Jueves"];
+
+function agregarFinal7() {
+    const input = document.getElementById("lista12");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    dias.push(capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaDias();
+}
+
+function agregarInicio6() {
+    const input = document.getElementById("lista12");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    dias.unshift(capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaDias();
+}
+
+function eliminarPrimerElemento5() {
+    if (dias.length > 0) {
+        dias.shift();
+    }
+    mostrarListaDias();
+}
+
+function mostrarListaDias() {
+    const lista = document.getElementById("resultado12");
+    lista.innerHTML = "";
+    for (let i = 0; i < dias.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2 ";
+        li.textContent = `${dias[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+/* 🧩 Ejercicio 12: Registro de personas en una sala */
+let personas = ["Carlos", "María", "Luis", "Ana", "Sofía"];
+
+function agregarFinal8() {
+    const input = document.getElementById("lista13");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    personas.push(capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaPersonas();
+}
+
+function agregarInicio6() {
+    const input = document.getElementById("lista13");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    personas.unshift(capitalize(valor));
+    input.value = "";
+    input.focus();
+    mostrarListaPersonas();
+}
+
+function eliminarUltimoElemento6() {
+    if (personas.length > 0) {
+        personas.pop();
+    }
+    mostrarListaPersonas();
+}
+
+function eliminarPrimerElemento6() {
+    if (personas.length > 0) {
+        personas.shift();
+    }
+    mostrarListaPersonas();
+}
+
+function mostrarListaPersonas() {
+    const lista = document.getElementById("resultado13");
+    lista.innerHTML = "";
+    for (let i = 0; i < personas.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-item-center-mb-2 ";
+        li.textContent = `${personas[i]}`;
+        lista.appendChild(li);
+    }
+}
+
+window.onload = function() {
+    mostrarListaPersonas();
+};
+
+window.onload = function() {
+    mostrarListaDias();
+};
