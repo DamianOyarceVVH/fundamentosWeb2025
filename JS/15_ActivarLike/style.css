@@ -1,59 +1,104 @@
 * {
-    margin: 0;
     padding: 0;
-    /*outline: 1px solid black;*/
-    font-family: cursive;
-    font-weight: 100;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: solid 1px red; */
+    font-family: 'Comic Neue', cursive;
 }
 
-body {
-    display: grid;
-    grid-template-rows: 1fr 1fr 10fr;
-    grid-template-columns: 1fr 3.6fr 6fr;
-    height: 100vh;
+.father_container {
+    border: 2px solid black;
+    padding: 10px;
+    width: 400px;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.4em;
-}
-
-.container {
-    display: grid;
-    grid-column: 2;
-    grid-row: 2;
-    padding: 0.8em;
-    border: 5px solid black;
-    border-radius: 5px;
-}
-
-.header {
+.cont1 {
     display: flex;
-    flex: 1;
-    margin: 0.6em;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-.likes {
+.sub_cont2 {
     display: flex;
-    flex: 1;
-    justify-content: end;
     align-items: center;
+    gap: 8px;
 }
 
-button {
-    background-color: #FFD966;
-    margin-inline: 1em;
-    padding: 0.1em 0.5em;
-    font-size: 1.4em;
-    border: 3px solid black;
-    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 1);
+.yellow {
+    background-color: #fbd85d;
+    border: 2px solid black;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.description {
-    margin: 0.6em;
+.cont2 p {
+    margin: 0;
+}
+
+.container-nav{
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    margin: 0px 500px 0px 500px ;
+    color: white;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5px; 
+    padding: 12px; 
+    width: 150px;     
+    height: 200px;    
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.elemento-tarjeta{
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta a {
+    flex: 1;
+    display: block;
+    margin: 20px 0;
+}
+
+
+
+.tarjetas-container {
+    display: flex;
+    gap: 20px;           
+    justify-content: center; 
+    margin: 10px 0;
+}
+
+
+.tarjetas-botones-container {
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;                
+    align-items: center;      
+    margin: 30px 0;
+}
+
+.Titulo{
+    text-align: center;
+    margin: 20px 0
+}
+
+.Image{
+    align-items: center;
+    display: flex;
+}
+
+.perfil-img {
+    display: block;
+    margin: 0 auto;
 }
