@@ -9,7 +9,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin-inline: 15%;
+    margin-inline: 18%;
     text-align: center;
 }
 
@@ -35,6 +35,7 @@ nav {
     background-color: #CCCCCC;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     padding-inline: 3em;
     padding-block: 1em;
@@ -42,27 +43,29 @@ nav {
 
 #browser {
     font-size: 1.2em;
-    margin-block: 0.5em;
-    padding-inline: 0.5rem;
-    border: 2px solid black;
+    margin-block: 0.8em;
+    padding: 0.5rem;
+    border: 0.5vh solid black;
     border-radius: 3px;
-    width: 18em;
+    width: 28em;
 }
 
 #login {
     background-color: #2B78E4;
     color: #fff;
-    padding: 0.1em 0.5em;
+    padding: 0.2em 1em;
     margin: 10px;
-    font-size: 1.2em;
-    width: 5em;
-    height: 2em;  
+    font-size: 2.4vh;
     border: 2px solid black;
     box-shadow: 0.2em 0.2em rgba(0, 0, 0, 1);
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 7vh;
+}
+
+h2 {
+    font-size: 3vh;
 }
 
 .header {
@@ -75,9 +78,9 @@ h1 {
 
 .likes button {
     background-color: #FFD966;
-    padding: 0.1em 0.5em;
+    padding: 0.3em 0.5em;
     margin: 10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     width: 7em;
     height: 2.4em;
     font-weight: 600;
@@ -96,13 +99,13 @@ h1 {
     display: flex;
     flex-direction: row;
     padding: 2em;
-    border: 3px solid black;
+    border: 0.6vh solid black;
     border-radius: 3px;
-    width: 35em;
-    height: 10em;
+    width: 80%;
+    height: 28vh;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 9%;
 }
 
 .word {
@@ -123,28 +126,27 @@ h1 {
 .card-2 {
     display: flex;
     flex-direction: column;
-    padding: 2em;
     text-align: start;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
+    border: 0.6vh solid black;
     border-radius: 3px;
-    width: 12em;
-    height: 8em;
-    margin-top: 2em;
+    width: 100%;
+    height: 26vh;
+    margin-top: 16.8%;
 }
 
 .card-2 h2 {
-    font-size: 1.8em;
-    width: 14rem;
+    font-size: 3.6vh;
+    margin-inline: 8%;
 }
 
 #add {
     background-color: #93C47D;
     padding: 0.2em 1.1em;
     margin: 1.2rem;
-    font-size: 1.3em;
-    width: 10em;
+    font-size: 3vh;
+    width: 36vh;
     border: 2px solid black;
     box-shadow: 0.2em 0.2em rgba(0, 0, 0, 1);
 }
