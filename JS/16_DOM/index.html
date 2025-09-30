@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tuputamadre</title>
+    <title>DOM</title>
 </head>
 <body>
     <main>
         <div class="formulario">
+            <h1>Formulario</h1>
             <div class="campos">
                 <ul>
                     <h2>Nombre</h2>
                     <li><input type="text"></li>
                     <h2>Edad</h2>
-                    <li><input type="text"></li>
-                    <h2>Curso</h2>
-                    <li><input type="text"></li>
+                    <li><input type="number"></li>
+                    <h2>Curso:</h2>
+                    <select id="mySelect" name="myOption">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
                     <h2>Jornada</h2>
-                    <li><input type="text"></li>
+                    <li><label><input type="radio" name="am-pm">Mañana</label></li>
+                    <li><label><input type="radio" name="am-pm">Tarde</label></li>
                     <h2></h2>
-                    <li><input type="checkbox"></li>
+                    <li><h2>Aceptar Reglamento</h2><input type="checkbox"></li>
                 </ul>
             </div>
         </div>
