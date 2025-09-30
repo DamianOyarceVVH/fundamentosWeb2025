@@ -21,11 +21,12 @@ input {
 button {
     margin-block: 0.7rem;
     padding-inline: 0.8rem;
+    height: 1.8rem;
     font-size: 1.02rem;
     background-color: #9900FF;
     color: #fff;
     border: 0.14rem solid black;
-    box-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 1);
+    box-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 1);
 }
 
 .top {
