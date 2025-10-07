@@ -1,12 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 h1 {
     font-size: 2.4rem;
+    font-weight: 500;
 }
 
 input {
@@ -22,11 +23,18 @@ button {
     margin-block: 0.7rem;
     padding-inline: 0.8rem;
     height: 1.8rem;
-    font-size: 1.02rem;
+    font-size: 1.1rem;
+    padding-bottom: 1vh;
     background-color: #9900FF;
     color: #fff;
+    cursor: pointer;
     border: 0.14rem solid black;
     box-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 1);
+}
+
+button:active {
+    background-color: black;
+    border-color: #9900FF;
 }
 
 .top {
@@ -39,12 +47,78 @@ button {
 
 .flex-container {
     margin-inline: 15%;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     margin-inline: 4%;
+    padding-block: 2vh;
     color: #fff;
 }
 
+.sub-header {
+    padding-bottom: 2vh;
+    border-bottom: 0.15rem solid black;
+    border-radius: 4%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row button {
+    margin-top: 5%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-block: 2vh;
+}
+
+.user img {
+    height: 9vh;
+}
+
+.user span {
+    margin-inline: 4%;
+    color: #9900FF;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.col-r {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 3%;
+}
+
+.video-small {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.8vh;
+    height: 15vh;
+    align-items: center;
+}
+
+.video-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.video-small span {
+    flex: 1.2;
+    padding-inline: 0.6rem;
+    cursor: pointer;
+}
+
+.placeholder video {
+    border: 0.3rem solid black;
+    border-radius: 0.2rem;
+}
