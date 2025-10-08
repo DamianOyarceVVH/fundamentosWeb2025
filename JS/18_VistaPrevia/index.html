@@ -1,88 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VideoLab</title>
-    <link rel="stylesheet" href="static/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoLab</title>
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
-    <!-- top navigation -->
-    <div class="top">
-        <div class="nav-container">
-            <h1>VideoLab</h1>
-            <input type="text" placeholder="Search" name="query" class="search">
-            <button class="btn">Login</button>
-        </div>
+  <!-- top navigation -->
+  <div class="top">
+    <div class="nav-container">
+      <h1>VideoLab</h1>
+      <input type="text" placeholder="Search" name="query" class="search">
+      <button class="btn">Login</button>
     </div>
+  </div>
 
-    <!-- main content -->
-    <div class="flex-container">
+  <!-- main content -->
+  <div class="flex-container">
 
-        <!-- left column -->
-        <div class="col-l">
+    <!-- left column -->
+    <div class="col-l">
 
-            <!-- this is a placeholder replace it with a real video -->
-            <figure class="placeholder">
-                <video width="524" height="295" controls
-                onmouseover="this.play()"
-                onmouseout="this.pause()"><source src="resources/video/" type="video/mp4">
-            </figure>
+      <!-- video principal: iframe responsive -->
+      <div class="video-responsive placeholder">
+        <iframe id="main-iframe" width="560" height="315" src="https://www.youtube.com/embed/Fg-u1KnSW9Y" title="El hombre que nunca existió" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
 
-            <!-- video info -->
-            <div class="row">
-                <div class="start">
-                    <h1>Example Video Title</h1>
-                    <h3>1.3K Views | June, 18, 2021</h3>
-                    <div class="user">
-                        <img src="resources/images/user_profile.png" alt="user-circle" class="avatar-s">
-                        <span class="user-name">Example User Name</span>
-                    </div>
-                </div>
-                <button class="btn">Subscribe</button>
-            </div>
-
+      <!-- video info -->
+      <div class="row">
+        <div class="start">
+          <h1 id="main-title">El hombre que nunca existió</h1>
+          <h3 id="main-meta">3.6M Views | Nov 12, 2020</h3>
+          <div class="user">
+            <img src="resources/images/user_profile.png" alt="user-circle" class="avatar-s">
+            <span class="user-name">Example User Name</span>
+          </div>
         </div>
-
-        <!-- right column -->
-        <div class="col-r">
-
-            <h3 class="sub-header">Up Next</h3>
-
-            <div class="video-small">
-                <video width="150" height="85" controls
-                onmouseover="this.play()"
-                onmouseout="this.pause()"><source src="resources/video/" type="video/mp4"></video>
-                <span class="video-title">Not a Rick Roll</span>
-            </div>
-
-            <div class="video-small">
-                <video width="150" height="85" controls
-                onmouseover="this.play()"
-                onmouseout="this.pause()"><source src="resources/video/" type="video/mp4"></video>
-                <span class="video-title">10 Facts About ET's Cat!</span>
-            </div>
-
-            <div class="video-small">
-                <video width="150" height="85" controls
-                onmouseover="this.play()"
-                onmouseout="this.pause()"><source src="resources/video/" type="video/mp4"></video>
-                <span class="video-title">5 Cosplay Tips</span>
-            </div>
-
-            <div class="video-small">
-                <video width="150" height="85" controls
-                onmouseover="this.play()"
-                onmouseout="this.pause()"><source src="resources/video/" type="video/mp4"></video>
-                <span class="video-title">Boy Battles Dinobot in Thunderdome</span>
-            </div>
-
-        </div>
+        <button class="btn">Subscribe</button>
+      </div>
 
     </div>
 
-    <script src="static/js/script.js"></script>
+    <!-- right column -->
+    <div class="col-r">
+
+      <h3 class="sub-header">Up Next</h3>
+
+      <!-- cada .video-small contiene data-video (ID o URL), data-title y opcional data-meta -->
+      <div class="video-small" data-video="dQw4w9WgXcQ" data-title="Not a Rick Roll" data-meta="2.3K Views | Jul 1, 2020">
+        <div class="thumb-wrapper">
+          <iframe class="thumb-iframe"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+          <div class="thumb-overlay" aria-hidden="true"></div>
+        </div>
+        <span class="video-title">Not a Rick Roll</span>
+      </div>
+
+      <div class="video-small" data-video="9bZkp7q19f0" data-title="Gangnam Style" data-meta="3.1M Views | May 15, 2012">
+        <div class="thumb-wrapper">
+          <iframe class="thumb-iframe"
+                  src="https://www.youtube.com/embed/9bZkp7q19f0?rel=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+          <div class="thumb-overlay" aria-hidden="true"></div>
+        </div>
+        <span class="video-title">Gangnam Style</span>
+      </div>
+
+      <div class="video-small" data-video="kJQP7kiw5Fk" data-title="Despacito" data-meta="5.8M Views | Jan 12, 2017">
+        <div class="thumb-wrapper">
+          <iframe class="thumb-iframe"
+                  src="https://www.youtube.com/embed/kJQP7kiw5Fk?rel=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+          <div class="thumb-overlay" aria-hidden="true"></div>
+        </div>
+        <span class="video-title">Despacito</span>
+      </div>
+
+      <div class="video-small" data-video="3JZ_D3ELwOQ" data-title="Counting Stars" data-meta="1.2M Views | Mar 3, 2015">
+        <div class="thumb-wrapper">
+          <iframe class="thumb-iframe"
+                  src="https://www.youtube.com/embed/3JZ_D3ELwOQ?rel=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+          <div class="thumb-overlay" aria-hidden="true"></div>
+        </div>
+        <span class="video-title">Counting Stars</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="static/js/script.js"></script>
 </body>
 </html>
