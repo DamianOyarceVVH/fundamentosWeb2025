@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid black;
+  /*outline: 1px solid black;*/
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
@@ -115,7 +115,7 @@ button:active {
 }
 
 .video-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -159,8 +159,8 @@ button:active {
 /* thumb wrapper: tamaño fijo para miniaturas (similar a 150x85) */
 .thumb-wrapper {
   position: relative;
-  width: 18vh;
-  height: 11vh;
+  width: 20vh;
+  height: 14vh;
   flex: 0 0 auto;
   overflow: hidden;
 }
