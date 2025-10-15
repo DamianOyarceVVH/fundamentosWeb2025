@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 1px solid black;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #9FC5F8;
+
+}
+
+.nav-title {
+  flex: 1;
+
+}
+
+.nav-list {
+  flex: 1;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
