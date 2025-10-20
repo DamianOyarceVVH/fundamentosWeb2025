@@ -5,26 +5,120 @@
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
 nav {
+  background-color: #9FC5F8;
+}
+
+.navegator h1, .navegator a {
+  color: #fff;
+}
+
+.navegator {
   display: flex;
   justify-content: space-between;
-  background-color: #9FC5F8;
-
+  margin-inline: 12%;
+  padding-block: 2vh;
 }
 
 .nav-title {
   flex: 1;
-
 }
 
 .nav-list {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .nav-list li {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-list a {
   text-decoration: none;
+  font-weight: 500;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 12%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3vh;
+  margin-top: 4vh;
+  border-bottom: 0.18rem solid #000;
+  border-radius: 5%;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 21%;
+}
+
+.list select {
+  font-size: 1rem;
+  padding: 0.5vh;
+  border: 0.12rem solid #000;
+}
+
+.weather {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-block: 5vh;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 2vh;
+  padding-inline: 4vh;
+  background-color: #EEEEEE;
+  width: 16%;
+  height: 55vh;
+}
+
+.cards img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+figcaption {
+
+}
+
+.degrees {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
