@@ -24,6 +24,7 @@ nav {
 .navegator {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-inline: 13%;
   padding-block: 1.5vh;
 }
@@ -80,6 +81,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 23%;
   font-weight: bold;
 }
@@ -98,6 +100,7 @@ nav {
   display: flex;
   text-align: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-block: 4vh;
 }
 
@@ -125,6 +128,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hottest {
