@@ -14,9 +14,9 @@
       </div>
       <div class="nav-list">
         <ul>
-          <li><h2><a href="#">Burbank</a></h2></li>
-          <li><h2><a href="#">Chicago</a></h2></li>
-          <li><h2><a href="#">Dallas</a></h2></li>
+          <li><h2><a href="#" onclick="infoMeteor()">Burbank</a></h2></li>
+          <li><h2><a href="#" onclick="infoMeteor()">Chicago</a></h2></li>
+          <li><h2><a href="#" onclick="infoMeteor()">Dallas</a></h2></li>
         </ul>
       </div>
     </div>
@@ -28,9 +28,9 @@
       </div>
       <div class="list">
         <p>Show temperature in</p>
-        <select name="change-degrees" id="conversion">
-          <option value="">°C</option>
-          <option value="">°F</option>
+        <select name="change-degrees" id="conversion" onchange="convertirTemp(this)">
+          <option value="C">°C</option>
+          <option value="F">°F</option>
         </select>
       </div>
     </div>
@@ -40,8 +40,8 @@
         <img src="resources/images/some_clouds.png" alt="some-rain">
         <p>some rain</p>
         <div class="degrees">
-          <h2>24°</h2>
-          <h2>18°</h2>
+          <h2 class="hottest">24°</h2>
+          <h2 class="coldest">18°</h2>
         </div>
       </div>
       <div class="cards">
@@ -49,8 +49,8 @@
         <img src="resources/images/some_sun.png" alt="some-sun">
         <p>some sun</p>
         <div class="degrees">
-          <h2>27°</h2>
-          <h2>19°</h2>
+          <h2 class="hottest">27°</h2>
+          <h2 class="coldest">19°</h2>
         </div>
       </div>
       <div class="cards">
@@ -58,8 +58,8 @@
         <img src="resources/images/some_clouds.png" alt="some-clouds">
         <p>some clouds</p>
         <div class="degrees">
-          <h2>21°</h2>
-          <h2>16°</h2>
+          <h2 class="hottest">21°</h2>
+          <h2 class="coldest">16°</h2>
         </div>
       </div>
       <div class="cards">
@@ -67,18 +67,23 @@
         <img src="resources/images/some_sun.png" alt="some-sun">
         <p>some sun</p>
         <div class="degrees">
-          <h2>26°</h2>
-          <h2>21°</h2>
+          <h2 class="hottest">26°</h2>
+          <h2 class="coldest">21°</h2>
         </div>
       </div>
     </div>
     <div class="galletitas">
       <img src="resources/images/cookie.png" alt="cookie">
-      <h2>Stop! Cookie time</h2>
-      <p>We use cookies (sadly not the edible ones) to personalize content and ads, 
-        to provide social media features and to analyse our traffic. Read more</p>
-      <button type="button">I Accept</button>
+      <div class="about">
+        <h3>Stop! Cookie time</h3>
+        <p>We use cookies (sadly not the edible ones) to personalize content and ads, 
+          to provide social media features and to analyse our traffic. <a href="#">Read more</a></p>
+      </div>
+      <div class="btn">
+        <button type="button" onclick="hide()">I Accept</button>
+      </div>
     </div>
   </div>
+  <script src="static/js/script.js"></script>
 </body>
 </html>
