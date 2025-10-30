@@ -1,13 +1,37 @@
-/* static/css/style.css */
-
-/*
- * Estilos para la barra lateral de navegación
- */
-#barra-lateral {
-    width: 80px; /* Ancho de la barra de íconos */
-    height: 100vh; /* Altura completa */
-    z-index: 1030; /* Asegura que esté sobre el contenido */
+* {
+    /* outline: 0.1rem solid #000; */ /* Comentado para producción */
 }
+
+#barra-lateral {
+    width: 6rem; 
+    height: 100vh;
+    z-index: 1030;
+}
+
+/* ===== NUEVA REGLA PARA SCROLL ===== */
+#barra-lateral .nav-pills {
+    /* Habilita el scroll vertical solo si el contenido excede la altura */
+    overflow-y: auto;
+    /* Oculta el scroll horizontal */
+    overflow-x: hidden;
+}
+
+/* (Opcional) Estilos para la barra de scroll */
+#barra-lateral .nav-pills::-webkit-scrollbar {
+    width: 6px;
+}
+#barra-lateral .nav-pills::-webkit-scrollbar-track {
+    background: #343a40; /* Fondo de la barra (un poco más claro que el nav) */
+}
+#barra-lateral .nav-pills::-webkit-scrollbar-thumb {
+    background: #6c757d; /* Color del "pulgar" de la barra */
+    border-radius: 3px;
+}
+#barra-lateral .nav-pills::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+/* ===== FIN DE NUEVA REGLA ===== */
+
 
 /*
  * Estilos para el contenido principal
@@ -33,21 +57,11 @@
 .icono-nav {
     font-size: 1.75rem; /* Tamaño de los íconos */
     
-    /* LA TRANSICIÓN SUAVIZADA (Criterio Principal)
-      Se aplica al 'transform' (escala) y al 'color' (del JS).
-      Dura 0.3 segundos con una aceleración 'ease'.
-    */
     transition: transform 0.3s ease, color 0.3s ease;
     
-    /* Asegura que el ícono sea un bloque para que la transición funcione bien */
     display: inline-block; 
 }
 
-/* * EFECTO HOVER (CSS)
- * Al pasar el mouse sobre el *enlace* (nav-link), 
- * escalamos el *ícono* (icono-nav) que está dentro.
- */
 .nav-link:hover .icono-nav {
-    /* Expansión de tamaño al 125% */
     transform: scale(1.25); 
 }
