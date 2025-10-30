@@ -14,9 +14,10 @@
 <body>
 
     <nav id="barra-lateral" class="bg-dark p-3 d-flex flex-column fixed-top">
-        
+
         <a class="navbar-brand text-white text-center mb-4" href="#">
-            <i class="bi bi-code-slash h2"></i> </a>
+            <i class="bi bi-code-slash h2"></i> 
+        </a>
 
         <ul class="nav nav-pills flex-column mb-auto">
             
@@ -158,32 +159,27 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a href="#contacto" class="nav-link text-secondary" 
-                   title="Contactos" 
-                   data-bs-toggle="tooltip" 
-                   data-bs-placement="right"
-                   onmouseover="resaltarIcono(this, '#dc3545')" 
-                   onmouseout="restaurarIcono(this)"
-                   onclick="mostrarSeccion(event, this)">
-                    <i class="bi bi-envelope-fill icono-nav"></i>
-                </a>
-            </li>
-        </ul>
+            </ul>
         
         <div class="mt-auto">
-            <a href="URL_DE_TU_PERFIL_GITHUB" 
-               target="_blank" 
-               class="nav-link text-secondary" 
-               title="Ver Perfil de GitHub">
-                <i class="bi bi-github icono-nav"></i>
+
+            <a href="#contacto" class="nav-link text-secondary" 
+               title="Contactos" 
+               data-bs-toggle="tooltip" 
+               data-bs-placement="right"
+               onmouseover="resaltarIcono(this, '#dc3545')" 
+               onmouseout="restaurarIcono(this)"
+               onclick="mostrarSeccion(event, this)">
+                <i class="bi bi-envelope-fill icono-nav"></i>
+            </a>
+
             <a href="URL_DE_TU_PERFIL_GITHUB" 
                target="_blank" 
                class="nav-link text-secondary" 
                title="Ver Perfil de GitHub">
                 <i class="bi bi-github icono-nav"></i>
             </a>
-            </div>
+        </div>
     </nav>
 
     <main id="contenido-principal" class="container p-4">
